@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<projectusersettings>
+	<changestatecache>
+		<codegenfilechangeinfo
+		changehash="18446744073669004543"
+		fileitemid="e56409ae-2a07-4a4b-8e19-290c345bd67e"
+		filelength="462"
+		lastcodegentimestamp="131983417207665122">
+			<codegenfilechangeinfo
+			changehash="1358803163"
+			fileitemid="7185eb36-c04b-4443-93d8-c928b85422a8"
+			filelength="2426"
+			lastcodegentimestamp="131983417207665122">
+			</codegenfilechangeinfo>
+		</codegenfilechangeinfo>
+		<codegenfilechangeinfo
+		changehash="801705546"
+		fileitemid="96570e2f-1900-4224-aeb1-184f32ffc9cc"
+		filelength="2353"
+		lastcodegentimestamp="131983417207425182">
+			<codegenfilechangeinfo
+			changehash="18446744073401170108"
+			fileitemid="3d6a2e8a-c16f-49eb-8bfd-e8269836fe65"
+			filelength="5097"
+			lastcodegentimestamp="131983417207425182">
+			</codegenfilechangeinfo>
+		</codegenfilechangeinfo>
+		<codegenfilechangeinfo
+		changehash="1303816206"
+		fileitemid="c328c137-6188-44c6-895f-7710264ab8d9"
+		filelength="8405"
+		lastcodegentimestamp="131983417207965193">
+			<codegenfilechangeinfo
+			changehash="458862998"
+			fileitemid="931ef3e8-dd6a-4c8b-b827-a3c946f8a368"
+			filelength="35265"
+			lastcodegentimestamp="131983417207965193">
+			</codegenfilechangeinfo>
+		</codegenfilechangeinfo>
+	</changestatecache>
+</projectusersettings>
