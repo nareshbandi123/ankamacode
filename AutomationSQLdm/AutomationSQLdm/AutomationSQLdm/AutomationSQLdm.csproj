@@ -114,6 +114,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationSecurity\Steps.cs">
+      <id>c674ba02-b088-4049-8f0b-aa2e9b5d654a</id>
+    </Compile>
+    <Compile Include="ApplicationSecurity\T721974Repo.cs">
+      <DependentUpon>T721974Repo.rxrep</DependentUpon>
+      <id>4f3243d5-ea0a-46f8-8e51-a9a417644105</id>
+      <BoundTo>19686f9b-863f-4604-a84f-c1addecb2b23</BoundTo>
+      <RepositoryCode>true</RepositoryCode>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721974\AddingWindowsUserToSecurityRole.cs">
+      <id>6dc41508-a9e8-4df6-8780-6eec2b2d011f</id>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721974\Recording1.cs">
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <id>a51b4375-7ac0-4a47-8150-0b67739b84b7</id>
+      <BoundTo>85c18964-d501-4151-a43f-bedef51ace1c</BoundTo>
+      <RecorderCode>true</RecorderCode>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721974\Recording1.UserCode.cs">
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <id>d8854ef9-25ff-4878-a656-77a3310ead83</id>
+      <BoundTo>85c18964-d501-4151-a43f-bedef51ace1c</BoundTo>
+      <UserCode>true</UserCode>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721975\AddingSqlUserToSecurityRole.cs">
+      <id>0cb89a8d-487e-4816-b0e5-587fa3678fc9</id>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721976\VerifyViewDataAcknowledgeWindowsUser.cs">
+      <id>ace974d2-5a79-420d-84e5-660ca740864a</id>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721977\VerifyViewDataAcknowledgeSqlUser.cs">
+      <id>54539df4-cf4c-46da-9d49-98cfb0aaf9bc</id>
+    </Compile>
+    <Compile Include="ApplicationSecurity\TC_T721981\VerifySnoozeAlertsForUserWithViewDataAcknowledgeAlarms.cs">
+      <id>92b026e9-b2aa-4ed1-a231-fadb8a3608da</id>
+    </Compile>
     <Compile Include="Application\AppRepo.cs">
       <BoundTo>96570e2f-1900-4224-aeb1-184f32ffc9cc</BoundTo>
       <DependentUpon>AppRepo.rxrep</DependentUpon>
@@ -141,6 +177,12 @@
     <Compile Include="Commons\Common.cs">
       <id>d2b51d01-5cb5-43c9-9013-4bbc5d96924a</id>
     </Compile>
+    <Compile Include="Commons\Constants.cs">
+      <id>e422ae39-da5d-43fd-8ca3-814776042bb6</id>
+    </Compile>
+    <Compile Include="Commons\DBOperations.cs">
+      <id>e479f661-938e-4fde-af12-43a1b11acd1f</id>
+    </Compile>
     <Compile Include="Commons\Reports.cs">
       <id>cd90157f-2c48-422a-a4d0-e1d3f8052ec2</id>
     </Compile>
@@ -156,8 +198,14 @@
     <Compile Include="Extensions\Extension.cs">
       <id>d57301cc-75c6-40e5-a327-b0aaa0b2f8b4</id>
     </Compile>
+    <Compile Include="Grooming Modifications\TC_21960\VerifyValuesInRepositoryTable.cs">
+      <id>ca34b0aa-e943-404b-b28c-50324aed6ff6</id>
+    </Compile>
     <Compile Include="Grooming Modifications\TC_721965\VerifyTableGrowthisAggregated.cs">
       <id>5cc35c0f-87cf-4e35-8506-edd84b6e775a</id>
+    </Compile>
+    <Compile Include="Grooming Modifications\TC_T721948\VerifyDefaultMetricsDataToBeGroomedAs90days.cs">
+      <id>367f991d-ff11-46a4-b35a-999e52ce63ff</id>
     </Compile>
     <Compile Include="Grooming Modifications\TC_T721953\VerifyLatestGroomingStatus.cs">
       <id>2593bdc0-2ced-4cb8-b4ef-350d8a1c6b65</id>
@@ -196,6 +244,22 @@
   <ItemGroup>
     <None Include="app.config">
       <id>69040490-c65c-4ca2-8685-110fa732b471</id>
+    </None>
+    <None Include="ApplicationSecurity\T721974Repo.rximg">
+      <DependentUpon>T721974Repo.rxrep</DependentUpon>
+      <id>3b670e4b-91c9-4cdb-af5a-f6382fd18eeb</id>
+      <BoundTo>19686f9b-863f-4604-a84f-c1addecb2b23</BoundTo>
+      <imageblob>true</imageblob>
+    </None>
+    <None Include="ApplicationSecurity\T721974Repo.rxrep">
+      <id>19686f9b-863f-4604-a84f-c1addecb2b23</id>
+      <repoid>e032fee8-66ef-49a5-bc55-053f9974bd0f</repoid>
+      <reporootid>c0b1886f-194f-4804-ae68-99f28ac1402e</reporootid>
+    </None>
+    <None Include="ApplicationSecurity\TC_T721974\Recording1.rxrec">
+      <id>85c18964-d501-4151-a43f-bedef51ace1c</id>
+      <BoundTo>e56409ae-2a07-4a4b-8e19-290c345bd67e</BoundTo>
+      <recordtableid>e461a081-13dd-49a1-be04-7dd1624076d3</recordtableid>
     </None>
     <None Include="Application\AppRepo.rximg">
       <BoundTo>96570e2f-1900-4224-aeb1-184f32ffc9cc</BoundTo>
@@ -245,6 +309,21 @@
     <Folder Include="Application">
       <id>4a6de247-0fc0-4c5f-91de-4426bcec9862</id>
     </Folder>
+    <Folder Include="ApplicationSecurity\TC_T721981">
+      <id>fe9aea29-0f71-4ead-aa44-06f008465cb4</id>
+    </Folder>
+    <Folder Include="ApplicationSecurity\TC_T721977">
+      <id>6c103ad8-2d14-4d1f-bf32-770f5dd26f97</id>
+    </Folder>
+    <Folder Include="ApplicationSecurity\TC_T721976">
+      <id>83018258-4671-4344-9574-85723398e5b9</id>
+    </Folder>
+    <Folder Include="ApplicationSecurity\TC_T721975">
+      <id>6f2cfef9-6646-4595-93e6-ce53e45511f7</id>
+    </Folder>
+    <Folder Include="ApplicationSecurity\TC_T721974">
+      <id>bbec5f46-13f9-4e29-bfb2-4ecd8c144071</id>
+    </Folder>
     <Folder Include="Base">
       <id>ef5cd861-297c-44b3-a2dd-d36529c4ce01</id>
     </Folder>
@@ -259,6 +338,12 @@
     </Folder>
     <Folder Include="Grooming Modifications">
       <id>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</id>
+    </Folder>
+    <Folder Include="Grooming Modifications\TC_T721948">
+      <id>07aab579-0086-4fe4-847b-37148ae33748</id>
+    </Folder>
+    <Folder Include="Grooming Modifications\TC_21960">
+      <id>989bb6e8-cb0f-4f48-bc50-576d9313eeb1</id>
     </Folder>
     <Folder Include="Grooming Modifications\TC_T721953">
       <id>0a6fc3b9-b05b-4388-8e12-4e087be00f66</id>
@@ -286,6 +371,9 @@
     </Folder>
     <Folder Include="DataBaseOperations">
       <id>465b1d7e-8983-4c90-959c-95643924835f</id>
+    </Folder>
+    <Folder Include="ApplicationSecurity">
+      <id>5ac10d29-42c8-402b-b73d-d8f395d0eb9e</id>
     </Folder>
     <Folder Include="SQLQueries">
       <id>8a4a7c66-ece1-4b70-b784-bb7bb3876280</id>

@@ -15,6 +15,6 @@
       <string>0a6fc3b9-b05b-4388-8e12-4e087be00f66</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Program.cs&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Application[]ApplicationSecurity[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721981[]]Base[]Configuration[]DataBaseOperations[]Grooming Modifications[TC_21960[]TC_T721948[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\DataBaseOperations\DataAccess.cs&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

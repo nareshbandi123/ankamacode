@@ -1,11 +1,17 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="DataBaseOperations\DataAccess.cs" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Configuration\Config.cs" />
+    <Element value="ApplicationSecurity\T721974Repo.rxrep" />
+    <Element value="AutomationSQLdmRepository.rxrep" />
     <Element value="Application\AppRepo.rxrep" />
     <Element value="AutomationSQLdm.rxtst" />
+    <Element value="ApplicationSecurity\TC_T721974\Recording1.rxrec" />
+    <Element value="Base\BaseClass.cs" />
+    <Element value="DataBaseOperations\DataAccess.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
