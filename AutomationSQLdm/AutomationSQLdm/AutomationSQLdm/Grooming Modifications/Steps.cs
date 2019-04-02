@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Threading;
 using WinForms = System.Windows.Forms;
 
+using System.Data;
+
 using Ranorex;
 using Ranorex.Core;
 using Ranorex.Core.Testing;
@@ -340,6 +342,101 @@ namespace AutomationSQLdm.Grooming_Modifications
 					throw new Exception("Failed : VerifyCurrentRunningStatusInAggregation :" + ex.Message);
 				}
 		}
+		
+			public static void VerifyValuesInRepositoryTable()
+		{
+			try 
+			{
+				string query = "select * from RepositoryInfo";
+	        	DataTable dt = DBOperations.GetData(query);
+	        	if(dt != null && dt.Rows.Count > 0)
+	        	{   
+	        		string GroomMetricsValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[0]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		string GroomQueryAggregationValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[1]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		string GroomAlertsValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[2]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		string GroomPrescriptiveAnalysisValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[3]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		string AggregateForecastingValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[4]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		string GroomForecastingValue = dt.Select("Name='"+ Constants.RepositoryInfo_TableCols[5]+"'")[0][Constants.RepositoryInfo_ColName].ToString();
+	        		
+	        		if(repo.GroomingOptionWindow.GroomStandardMetrixAndBaseline.TextValue.Equals(GroomMetricsValue))
+	        			Reports.ReportLog("Groom standard Metrics and baseline Data is Displaying : " + repo.GroomingOptionWindow.GroomStandardMetrixAndBaseline.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog("Groom standard Metrics value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.GroomStandardMetrixAndBaselineInfo, "Text", GroomMetricsValue);
+					}
+					
+					if(repo.GroomingOptionWindow.GroomInactiveAlert.TextValue.Equals(GroomQueryAggregationValue))
+	        			Reports.ReportLog("Groom Inactive Alert is Displaying : " + repo.GroomingOptionWindow.GroomInactiveAlert.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog("Groom Inactive Alert value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.GroomInactiveAlertInfo, "Text", GroomQueryAggregationValue);
+					}
+					
+					if(repo.GroomingOptionWindow.AggregateQueryDataInto.TextValue.Equals(GroomAlertsValue))
+						Reports.ReportLog(" Aggregate Query Data Into is Displaying : " + repo.GroomingOptionWindow.AggregateQueryDataInto.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog(" Aggregat eQuery Data Into value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.AggregateQueryDataIntoInfo, "Text", GroomAlertsValue);
+					}
+
+					if(repo.GroomingOptionWindow.GroomPrescriptiveAnalysis.TextValue.Equals(GroomPrescriptiveAnalysisValue))
+	        			Reports.ReportLog(" GroomPrescriptiveAnalysis is Displaying : " + repo.GroomingOptionWindow.GroomPrescriptiveAnalysis.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog(" GroomPrescriptiveAnalysis value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.GroomPrescriptiveAnalysisInfo, "Text", GroomPrescriptiveAnalysisValue);
+					}
+					
+					if(repo.GroomingOptionWindow.AggregateTextbox.TextValue.Equals(AggregateForecastingValue))
+	        			Reports.ReportLog(" Aggregate Forcasting data is Displaying : " + repo.GroomingOptionWindow.AggregateTextbox.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog(" Aggregate Forcasting data value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.AggregateTextboxInfo, "Text", AggregateForecastingValue);
+					}
+					
+					if(repo.GroomingOptionWindow.GroomForecastTextbox.TextValue.Equals(GroomForecastingValue))
+	        			Reports.ReportLog(" Groom Forecasting is Displaying : " + repo.GroomingOptionWindow.GroomForecastTextbox.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+					{
+						Reports.ReportLog(" Groom Forecasting value not matching with DB value : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Validate.AttributeEqual(repo.GroomingOptionWindow.GroomForecastTextboxInfo, "Text", GroomForecastingValue);
+					}
+	        	}
+	        		
+	        	else
+	        		Reports.ReportLog("Records is not present in RepositoryInfo Table " , Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+	        	
+	        	
+			} 
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyValuesInRepositoryTable :" + ex.Message);
+			}
+		}
+ 		
+		public static void VerifyDefaultMetricsDataAs90Days()
+		{
+			try 
+			{
+				repo.GroomingOptionWindow.SelfInfo.WaitForExists(new Duration(1000000));
+				
+				Validate.AttributeContains(repo.GroomingOptionWindow.GroomStandardMetrixAndBaselineInfo, "Text", "90");
+				
+				if (repo.GroomingOptionWindow.GroomStandardMetrixAndBaseline.TextValue.Equals("90") )
+					Reports.ReportLog("Groom standard Metrics and baseline Data is Displaying : " + repo.GroomingOptionWindow.GroomStandardMetrixAndBaseline.TextValue, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+				else
+					Reports.ReportLog("Groom standard Metrics and baseline Data is Displaying : ", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+			} 
+			catch (Exception ex)
+			{
+				throw new Exception("Failed : VerifyDefaultMetricsDataAs90Days :" + ex.Message);
+			}
+		}
+ 		
 		
 		public static void VerifyCompletionStatusInAggregation(string strCompletionStatusInAG)
 		{

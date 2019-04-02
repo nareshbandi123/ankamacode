@@ -5,16 +5,11 @@
     <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
-      <string>28d505b6-6704-4f18-ae40-dfd9c24fdcc7</string>
-      <string>d51e70be-b510-4597-b7ba-3ddbae30f06d</string>
-      <string>71a738f9-6698-414a-bdb4-8794c49c46e2</string>
-      <string>d4d710d0-ab61-4424-be91-0096fa1ff762</string>
-      <string>7d780982-3b24-49a2-88de-006c57bd4d06</string>
-      <string>18dce66b-5b8e-4cce-89eb-a21d34a22768</string>
-      <string>05a7eb2c-c01f-4b28-8723-e1fbd75a8fdf</string>
-      <string>0a6fc3b9-b05b-4388-8e12-4e087be00f66</string>
+      <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
+      <string>49087ea0-c347-48f4-8b4c-3993bb84ab9c</string>
+      <string>9042dad6-5c3c-4cc4-acb4-c649dc4dd6d6</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Application[]ApplicationSecurity[TC_T721974[]TC_T721975[]TC_T721976[]TC_T721977[]TC_T721981[]]Base[]Configuration[]DataBaseOperations[]Grooming Modifications[TC_21960[]TC_T721948[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\DataBaseOperations\DataAccess.cs&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Commons[]Configuration[]DataBaseOperations[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

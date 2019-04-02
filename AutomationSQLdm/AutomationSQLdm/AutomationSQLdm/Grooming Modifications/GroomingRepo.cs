@@ -31,6 +31,7 @@ namespace AutomationSQLdm.Grooming_Modifications
         GroomingRepoFolders.GroomingOptionWindowAppFolder _groomingoptionwindow;
         GroomingRepoFolders.SQLdmDCAppFolder _sqldmdc;
         GroomingRepoFolders.DeleteConfirmWindowAppFolder _deleteconfirmwindow;
+        GroomingRepoFolders.ExplorerAppFolder _explorer;
 
         /// <summary>
         /// Gets the singleton class instance representing the GroomingRepo element repository.
@@ -51,6 +52,7 @@ namespace AutomationSQLdm.Grooming_Modifications
             _groomingoptionwindow = new GroomingRepoFolders.GroomingOptionWindowAppFolder(this);
             _sqldmdc = new GroomingRepoFolders.SQLdmDCAppFolder(this);
             _deleteconfirmwindow = new GroomingRepoFolders.DeleteConfirmWindowAppFolder(this);
+            _explorer = new GroomingRepoFolders.ExplorerAppFolder(this);
         }
 
 #region Variables
@@ -103,6 +105,15 @@ namespace AutomationSQLdm.Grooming_Modifications
         public virtual GroomingRepoFolders.DeleteConfirmWindowAppFolder DeleteConfirmWindow
         {
             get { return _deleteconfirmwindow; }
+        }
+
+        /// <summary>
+        /// The Explorer folder.
+        /// </summary>
+        [RepositoryFolder("5f6c1da8-e530-4936-86a3-5e6b57c9bfc9")]
+        public virtual GroomingRepoFolders.ExplorerAppFolder Explorer
+        {
+            get { return _explorer; }
         }
     }
 
@@ -226,6 +237,10 @@ namespace AutomationSQLdm.Grooming_Modifications
             RepoItemInfo _btngowokInfo;
             RepoItemInfo _btnrefreshInfo;
             RepoItemInfo _btnapplyInfo;
+            RepoItemInfo _groomprescriptiveanalysisInfo;
+            RepoItemInfo _groomstandardmetrixandbaselineInfo;
+            RepoItemInfo _groominactivealertInfo;
+            RepoItemInfo _aggregatequerydataintoInfo;
 
             /// <summary>
             /// Creates a new GroomingOptionWindow  folder.
@@ -233,8 +248,8 @@ namespace AutomationSQLdm.Grooming_Modifications
             public GroomingOptionWindowAppFolder(RepoGenBaseFolder parentFolder) :
                     base("GroomingOptionWindow", "/form[@controlname='GroomingOptionsDialog']", parentFolder, 30000, null, true, "45d6f264-a0b9-4d39-b07c-41e3680e69d5", "")
             {
-                _aggregatetextboxInfo = new RepoItemInfo(this, "AggregateTextbox", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='auditGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit' and @text='1095']", 30000, null, "bb7bc07f-fdce-435d-a9ac-c0a43ae7aa8e");
-                _groomforecasttextboxInfo = new RepoItemInfo(this, "GroomForecastTextbox", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='GroomForecastNumericUpDown']/text[@controlname='upDownEdit' and @text='1095']", 30000, null, "628b3592-d551-45fb-ac4c-09da6d84873f");
+                _aggregatetextboxInfo = new RepoItemInfo(this, "AggregateTextbox", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='auditGroomingThresholdNumericUpDown' and @instance='6']/text[@controlname='upDownEdit']", 30000, null, "bb7bc07f-fdce-435d-a9ac-c0a43ae7aa8e");
+                _groomforecasttextboxInfo = new RepoItemInfo(this, "GroomForecastTextbox", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='GroomForecastNumericUpDown' and @instance='7']/text[@controlname='upDownEdit']", 30000, null, "628b3592-d551-45fb-ac4c-09da6d84873f");
                 _cancelbuttonInfo = new RepoItemInfo(this, "CancelButton", ".//button[@controlname='cancelButton']", 30000, null, "f32922fa-0f10-43c9-bf8b-635762c36ac8");
                 _combineolderdataInfo = new RepoItemInfo(this, "CombineOlderData", ".//container[@controlname='groupBox2']/text[@controlname='label15']", 30000, null, "b11a9e64-8b5f-4df3-8bfd-9c6af34e45f8");
                 _aggregationincurrenttimeInfo = new RepoItemInfo(this, "AggregationInCurrentTime", ".//container[@controlname='containerPanel']/?/?/container[@controlname='groupBox2']", 30000, null, "4535d7a1-d40a-4b9f-9e94-eff8ebb581df");
@@ -249,6 +264,10 @@ namespace AutomationSQLdm.Grooming_Modifications
                 _btngowokInfo = new RepoItemInfo(this, "btnGOWOk", ".//button[@controlname='okButton']", 30000, null, "db6619de-a8c3-448e-9193-8d14f5673a7f");
                 _btnrefreshInfo = new RepoItemInfo(this, "btnRefresh", ".//container[@controlname='containerPanel']/?/?/button[@controlname='refresh']", 30000, null, "dede8117-c9cc-4572-b1f4-7c706fe10774");
                 _btnapplyInfo = new RepoItemInfo(this, "btnApply", ".//button[@controlname='apply']", 30000, null, "efff6fbd-be15-4e48-b072-07a1abf036e0");
+                _groomprescriptiveanalysisInfo = new RepoItemInfo(this, "GroomPrescriptiveAnalysis", ".//container[@controlname='tableLayoutPanel4']/container[@controltypename='NumericUpDown' and @instance='5']/text[@controlname='upDownEdit']", 30000, null, "75d1eb55-600b-44fc-ac08-9fc009910a61");
+                _groomstandardmetrixandbaselineInfo = new RepoItemInfo(this, "GroomStandardMetrixAndBaseline", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='metricsGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "cb98d8c0-d2f4-4450-b009-3532ca0073e0");
+                _groominactivealertInfo = new RepoItemInfo(this, "GroomInactiveAlert", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='alertsGroomingThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "3fb2ebda-cce5-4ac4-b199-394653d2665c");
+                _aggregatequerydataintoInfo = new RepoItemInfo(this, "AggregateQueryDataInto", ".//container[@controlname='tableLayoutPanel4']/container[@controlname='aggregationThresholdNumericUpDown']/text[@controlname='upDownEdit']", 30000, null, "de5fbc57-3a2c-4f81-9e5c-abc2a430930a");
             }
 
             /// <summary>
@@ -658,6 +677,102 @@ namespace AutomationSQLdm.Grooming_Modifications
                     return _btnapplyInfo;
                 }
             }
+
+            /// <summary>
+            /// The GroomPrescriptiveAnalysis item.
+            /// </summary>
+            [RepositoryItem("75d1eb55-600b-44fc-ac08-9fc009910a61")]
+            public virtual Ranorex.Text GroomPrescriptiveAnalysis
+            {
+                get
+                {
+                    return _groomprescriptiveanalysisInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomPrescriptiveAnalysis item info.
+            /// </summary>
+            [RepositoryItemInfo("75d1eb55-600b-44fc-ac08-9fc009910a61")]
+            public virtual RepoItemInfo GroomPrescriptiveAnalysisInfo
+            {
+                get
+                {
+                    return _groomprescriptiveanalysisInfo;
+                }
+            }
+
+            /// <summary>
+            /// The GroomStandardMetrixAndBaseline item.
+            /// </summary>
+            [RepositoryItem("cb98d8c0-d2f4-4450-b009-3532ca0073e0")]
+            public virtual Ranorex.Text GroomStandardMetrixAndBaseline
+            {
+                get
+                {
+                    return _groomstandardmetrixandbaselineInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomStandardMetrixAndBaseline item info.
+            /// </summary>
+            [RepositoryItemInfo("cb98d8c0-d2f4-4450-b009-3532ca0073e0")]
+            public virtual RepoItemInfo GroomStandardMetrixAndBaselineInfo
+            {
+                get
+                {
+                    return _groomstandardmetrixandbaselineInfo;
+                }
+            }
+
+            /// <summary>
+            /// The GroomInactiveAlert item.
+            /// </summary>
+            [RepositoryItem("3fb2ebda-cce5-4ac4-b199-394653d2665c")]
+            public virtual Ranorex.Text GroomInactiveAlert
+            {
+                get
+                {
+                    return _groominactivealertInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The GroomInactiveAlert item info.
+            /// </summary>
+            [RepositoryItemInfo("3fb2ebda-cce5-4ac4-b199-394653d2665c")]
+            public virtual RepoItemInfo GroomInactiveAlertInfo
+            {
+                get
+                {
+                    return _groominactivealertInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AggregateQueryDataInto item.
+            /// </summary>
+            [RepositoryItem("de5fbc57-3a2c-4f81-9e5c-abc2a430930a")]
+            public virtual Ranorex.Text AggregateQueryDataInto
+            {
+                get
+                {
+                    return _aggregatequerydataintoInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AggregateQueryDataInto item info.
+            /// </summary>
+            [RepositoryItemInfo("de5fbc57-3a2c-4f81-9e5c-abc2a430930a")]
+            public virtual RepoItemInfo AggregateQueryDataIntoInfo
+            {
+                get
+                {
+                    return _aggregatequerydataintoInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -892,6 +1007,72 @@ namespace AutomationSQLdm.Grooming_Modifications
                 get
                 {
                     return _btnconfirmcancelInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ExplorerAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("5f6c1da8-e530-4936-86a3-5e6b57c9bfc9")]
+        public partial class ExplorerAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _automationsqldmranorexstudioadminiInfo;
+
+            /// <summary>
+            /// Creates a new Explorer  folder.
+            /// </summary>
+            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Explorer", "/menubar[@processname='explorer']", parentFolder, 30000, null, true, "5f6c1da8-e530-4936-86a3-5e6b57c9bfc9", "")
+            {
+                _automationsqldmranorexstudioadminiInfo = new RepoItemInfo(this, "AutomationSQLdmRanorexStudioAdmini", "container[@controlid='40965']//toolbar[@accessiblename='Running applications']/button[@accessiblename~'^AutomationSQLdm\\ -\\ Ranorex']", 30000, null, "01ace59b-fcc4-4fe5-ba6b-b145848cc5e8");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("5f6c1da8-e530-4936-86a3-5e6b57c9bfc9")]
+            public virtual Ranorex.MenuBar Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("5f6c1da8-e530-4936-86a3-5e6b57c9bfc9")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The AutomationSQLdmRanorexStudioAdmini item.
+            /// </summary>
+            [RepositoryItem("01ace59b-fcc4-4fe5-ba6b-b145848cc5e8")]
+            public virtual Ranorex.Button AutomationSQLdmRanorexStudioAdmini
+            {
+                get
+                {
+                    return _automationsqldmranorexstudioadminiInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The AutomationSQLdmRanorexStudioAdmini item info.
+            /// </summary>
+            [RepositoryItemInfo("01ace59b-fcc4-4fe5-ba6b-b145848cc5e8")]
+            public virtual RepoItemInfo AutomationSQLdmRanorexStudioAdminiInfo
+            {
+                get
+                {
+                    return _automationsqldmranorexstudioadminiInfo;
                 }
             }
         }
