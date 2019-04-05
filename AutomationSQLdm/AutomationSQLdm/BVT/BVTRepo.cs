@@ -241,6 +241,10 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _txtqueqhquerysignatureInfo;
             RepoItemInfo _tblqueryeventoccerrancesInfo;
             RepoItemInfo _btnqwquerywaitsovertimeInfo;
+            RepoItemInfo _tbldbssummaryInfo;
+            RepoItemInfo _tbldbstempdbsummaryInfo;
+            RepoItemInfo _tbldbsconfigurationInfo;
+            RepoItemInfo _tbldbsfilesInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -275,6 +279,10 @@ namespace AutomationSQLdm.BVT
                 _txtqueqhquerysignatureInfo = new RepoItemInfo(this, "txtQUEQHQuerySignature", ".//statusbar[@automationid='statusBar']/container[2]/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//toolbar[@accessiblename='N/A']/text[@accessiblename='Query Signature:']", 30000, null, "1ac53496-5430-4106-be56-730602c18cbb");
                 _tblqueryeventoccerrancesInfo = new RepoItemInfo(this, "tblQueryEventOccerrances", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='splitContainer']//table[@accessiblename='Loading...']", 30000, null, "97717507-ac04-4b57-ad21-592e9f89d219");
                 _btnqwquerywaitsovertimeInfo = new RepoItemInfo(this, "btnQWQueryWaitsOverTime", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//toolbar[@controlname='headerStrip1']/button[@accessiblename='Query Waits Over Time']", 30000, null, "4b9c1ef9-ca0e-4511-9555-ec765ea99f9f");
+                _tbldbssummaryInfo = new RepoItemInfo(this, "tblDBSSummary", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesSummaryView']//table[@accessiblerole='Table']", 30000, null, "a46dff0c-7ffe-4991-b4cc-be263d7d93ca");
+                _tbldbstempdbsummaryInfo = new RepoItemInfo(this, "tblDBSTempDBSummary", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/?/?/container[@controlname='DatabasesTempdbView_Fill_Panel']//table[@accessiblename='No Data Available']", 30000, null, "7d37f544-3be8-4586-8b73-df846e0d5e68");
+                _tbldbsconfigurationInfo = new RepoItemInfo(this, "tblDBSConfiguration", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']", 30000, null, "195a2ec4-962e-4d2e-b2b7-76d747894459");
+                _tbldbsfilesInfo = new RepoItemInfo(this, "tblDBSFiles", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesFilesView']//table[@accessiblename='Loading...']", 30000, null, "8dd4598b-05d8-4588-a263-3ca1bb8adc88");
             }
 
             /// <summary>
@@ -850,6 +858,102 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _btnqwquerywaitsovertimeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSSummary item.
+            /// </summary>
+            [RepositoryItem("a46dff0c-7ffe-4991-b4cc-be263d7d93ca")]
+            public virtual Ranorex.Table tblDBSSummary
+            {
+                get
+                {
+                    return _tbldbssummaryInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSSummary item info.
+            /// </summary>
+            [RepositoryItemInfo("a46dff0c-7ffe-4991-b4cc-be263d7d93ca")]
+            public virtual RepoItemInfo tblDBSSummaryInfo
+            {
+                get
+                {
+                    return _tbldbssummaryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSTempDBSummary item.
+            /// </summary>
+            [RepositoryItem("7d37f544-3be8-4586-8b73-df846e0d5e68")]
+            public virtual Ranorex.Table tblDBSTempDBSummary
+            {
+                get
+                {
+                    return _tbldbstempdbsummaryInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSTempDBSummary item info.
+            /// </summary>
+            [RepositoryItemInfo("7d37f544-3be8-4586-8b73-df846e0d5e68")]
+            public virtual RepoItemInfo tblDBSTempDBSummaryInfo
+            {
+                get
+                {
+                    return _tbldbstempdbsummaryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSConfiguration item.
+            /// </summary>
+            [RepositoryItem("195a2ec4-962e-4d2e-b2b7-76d747894459")]
+            public virtual Ranorex.Table tblDBSConfiguration
+            {
+                get
+                {
+                    return _tbldbsconfigurationInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSConfiguration item info.
+            /// </summary>
+            [RepositoryItemInfo("195a2ec4-962e-4d2e-b2b7-76d747894459")]
+            public virtual RepoItemInfo tblDBSConfigurationInfo
+            {
+                get
+                {
+                    return _tbldbsconfigurationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSFiles item.
+            /// </summary>
+            [RepositoryItem("8dd4598b-05d8-4588-a263-3ca1bb8adc88")]
+            public virtual Ranorex.Table tblDBSFiles
+            {
+                get
+                {
+                    return _tbldbsfilesInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblDBSFiles item info.
+            /// </summary>
+            [RepositoryItemInfo("8dd4598b-05d8-4588-a263-3ca1bb8adc88")]
+            public virtual RepoItemInfo tblDBSFilesInfo
+            {
+                get
+                {
+                    return _tbldbsfilesInfo;
                 }
             }
 

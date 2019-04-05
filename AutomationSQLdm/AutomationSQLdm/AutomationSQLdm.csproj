@@ -147,6 +147,18 @@
     <Compile Include="BVT\Steps.cs">
       <id>4f4d7609-24f4-4588-9914-7943fa6ff22b</id>
     </Compile>
+    <Compile Include="BVT\TC_722145\VerifyDatabasesFilesviewisDisplayedSuccessfully.cs">
+      <id>f17c56cd-6da5-4ec2-8e53-b5f4e4aa8137</id>
+    </Compile>
+    <Compile Include="BVT\TC_722146\VerifyDatabasesConfigurationviewisDisplayedSuccessfully.cs">
+      <id>dd34f45c-ad04-45eb-a426-9c940ac844d8</id>
+    </Compile>
+    <Compile Include="BVT\TC_722147\VerifyDatabasesTempdbSummaryviewisDisplayedSuccessfully.cs">
+      <id>e1c14bfc-7516-4a10-98d1-35cfbe5b8758</id>
+    </Compile>
+    <Compile Include="BVT\TC_722148\VerifyDatabasesSummaryviewisDisplayedSuccessfully.cs">
+      <id>e9c021be-4452-49a9-a6e8-10a6a86ce59a</id>
+    </Compile>
     <Compile Include="BVT\TC_722149\VerifyQueriesQueryWaitsviewisDisplayedSuccessfully.cs">
       <id>35efbef0-268c-4c71-a789-9b6fa8535032</id>
     </Compile>
@@ -324,6 +336,18 @@
     </Folder>
     <Folder Include="Base">
       <id>ef5cd861-297c-44b3-a2dd-d36529c4ce01</id>
+    </Folder>
+    <Folder Include="BVT\TC_722145">
+      <id>507e1fe9-b3aa-4282-8307-c5e66a10f8d3</id>
+    </Folder>
+    <Folder Include="BVT\TC_722146">
+      <id>7b9fbf10-a042-432e-9e04-1cdc7a8d3abd</id>
+    </Folder>
+    <Folder Include="BVT\TC_722147">
+      <id>4111d808-51c3-433a-939b-9d26c6cd0de9</id>
+    </Folder>
+    <Folder Include="BVT\TC_722148">
+      <id>d1768a1d-b09a-4ad6-812d-8a8992841931</id>
     </Folder>
     <Folder Include="BVT\TC_722149">
       <id>1547d1f9-20da-494f-9a40-8022dbdc47b8</id>

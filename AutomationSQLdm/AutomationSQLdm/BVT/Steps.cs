@@ -41,7 +41,7 @@ namespace AutomationSQLdm.BVT
 					if (repo.Application.SQLdmPane.TextValue == "SQLDM Today")
 						Reports.ReportLog("SQLdm Today pane is Displaying", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					else
-						Reports.ReportLog("SQLdm Today pane is Not Displaying", Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("SQLdm Today pane is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
 				} 
 				catch (Exception ex)
 				{
@@ -321,6 +321,22 @@ namespace AutomationSQLdm.BVT
 				}
 			}
           
+            public static void ClickOnDataBasesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabDatabasesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabDatabases.Click();
+				    Reports.ReportLog("Successfully Clicked On DataBases Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnDataBasesTab :" + ex.Message);
+				}
+			}
            public static void ClickOnSignatureMode()
 			{
 				try 
@@ -389,7 +405,7 @@ namespace AutomationSQLdm.BVT
 				}
 			}
           
-            public static void ClickOnMirroring()
+            public static void ClickOnMirroringInDB()
 			{
 				try 
 				{
@@ -402,11 +418,11 @@ namespace AutomationSQLdm.BVT
 				} 
 				catch (Exception ex)
 				{
-					throw new Exception("Failed : ClickOnMirroring :" + ex.Message);
+					throw new Exception("Failed : ClickOnMirroringInDB :" + ex.Message);
 				}
 			}
             
-             public static void ClickOnTablesAndIndexes()
+             public static void ClickOnTablesAndIndexesInDB()
 			{
 				try 
 				{
@@ -419,11 +435,11 @@ namespace AutomationSQLdm.BVT
 				} 
 				catch (Exception ex)
 				{
-					throw new Exception("Failed : ClickOnTablesAndIndexes :" + ex.Message);
+					throw new Exception("Failed : ClickOnTablesAndIndexesInDB :" + ex.Message);
 				}
 			}
              
-              public static void ClickOnBackupsAndRestores()
+              public static void ClickOnBackupsAndRestoresInDB()
 			{
 				try 
 				{
@@ -436,10 +452,27 @@ namespace AutomationSQLdm.BVT
 				} 
 				catch (Exception ex)
 				{
-					throw new Exception("Failed : ClickOnBackupsAndRestores :" + ex.Message);
+					throw new Exception("Failed : ClickOnBackupsAndRestoresInDB :" + ex.Message);
 				}
 			}
              
+               public static void ClickOnFilesInDB()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.DatabasesTab.rgDBFilesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.DatabasesTab.rgDBFiles.Click();
+				    Reports.ReportLog("Successfully Clicked On Files in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnFilesInDB :" + ex.Message);
+				}
+			}
+                
 			 public static void ClickOnConfigurationInDB()
 			{
 				try 
@@ -644,6 +677,7 @@ namespace AutomationSQLdm.BVT
 				}
 			}
 			
+			
 			public static void VerifyQueryWaitsIsDisplayed()
 			{
 				try 
@@ -660,8 +694,107 @@ namespace AutomationSQLdm.BVT
 			}
 			
 			
+			public static void VerifySummaryInDataBases()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblDBSSummaryInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblDBSSummaryInfo.Exists())
+					{
+						repo.SQLdm.tblDBSSummary.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Summary In DataBases Is:" + repo.SQLdm.tblDBSSummary.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Summary View Displayed Successfully in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Summary View Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifySummaryInDataBases :" + ex.Message);
+				}
+			}
+			
+			public static void VerifyTempDBSummaryInDataBases()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
+					{
+						repo.SQLdm.tblDBSTempDBSummary.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Temp DB Summary In DataBases Is:" + repo.SQLdm.tblDBSTempDBSummary.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Temp DB Summary View Displayed Successfully in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Temp DB Summary View Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyTempDBSummaryInDataBases :" + ex.Message);
+				}
+			}
+			
+			
+			
+			public static void VerifyConfigurationInDataBases()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblDBSConfigurationInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblDBSConfigurationInfo.Exists())
+					{
+						repo.SQLdm.tblDBSConfiguration.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Configuration In DataBases Is:" + repo.SQLdm.tblDBSConfiguration.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Configuration View Displayed Successfully in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Configuration View Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyConfigurationInDataBases :" + ex.Message);
+				}
+			}
+			
+			public static void VerifyFilesInDataBases()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblDBSFilesInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblDBSFilesInfo.Exists())
+					{
+						repo.SQLdm.tblDBSFiles.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Files In DataBases Is:" + repo.SQLdm.tblDBSFiles.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Files View Displayed Successfully in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Files View Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyFilesInDataBases :" + ex.Message);
+				}
+			}
+			
           //--------------------------------------
          
           
     }
 }
+    
