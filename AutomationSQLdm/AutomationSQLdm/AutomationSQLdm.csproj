@@ -147,6 +147,27 @@
     <Compile Include="BVT\Steps.cs">
       <id>4f4d7609-24f4-4588-9914-7943fa6ff22b</id>
     </Compile>
+    <Compile Include="BVT\TC_722135\PendingUpdateVerifythatResourcesServerWaitsviewisDisplayedSuccessfull.cs">
+      <id>a53b3083-4452-4662-b28f-2e2fa4246c74</id>
+    </Compile>
+    <Compile Include="BVT\TC_722136\VerifyResourcesProcedureCacheViewIsDisplayedSuccessfully.cs">
+      <id>aa5e94bf-0ed6-46e4-9a07-694297a1cfe5</id>
+    </Compile>
+    <Compile Include="BVT\TC_722137\VerifyResourcesFileActivityviewisDisplayedSuccessfully.cs">
+      <id>47c78cc9-034c-4af9-aa49-85436fbdf183</id>
+    </Compile>
+    <Compile Include="BVT\TC_722138\PendingUpdateVerifythatResourcesDiskviewisDisplayedSuccessfully.cs">
+      <id>6ed437eb-5995-4794-b6bc-da42b8cfba45</id>
+    </Compile>
+    <Compile Include="BVT\TC_722139\VerifyResourcesMemoryviewisDisplayedSuccessfully.cs">
+      <id>048d23a9-12c4-4136-b80d-7a81ab725cda</id>
+    </Compile>
+    <Compile Include="BVT\TC_722140\VerifythatResourcesCPUisDisplayedSuccessfully.cs">
+      <id>b128eb4f-dfd1-4784-acdb-a71bf660bd86</id>
+    </Compile>
+    <Compile Include="BVT\TC_722142\VerifyResourcesSummaryisDisplayedSuccessfully.cs">
+      <id>8f48a16c-fc88-445e-ae94-cc51780483d7</id>
+    </Compile>
     <Compile Include="BVT\TC_722145\VerifyDatabasesFilesviewisDisplayedSuccessfully.cs">
       <id>f17c56cd-6da5-4ec2-8e53-b5f4e4aa8137</id>
     </Compile>
@@ -336,6 +357,27 @@
     </Folder>
     <Folder Include="Base">
       <id>ef5cd861-297c-44b3-a2dd-d36529c4ce01</id>
+    </Folder>
+    <Folder Include="BVT\TC_722135">
+      <id>56c0efec-564d-4a04-86a2-443b6eab88b5</id>
+    </Folder>
+    <Folder Include="BVT\TC_722136">
+      <id>9048b278-0637-4d23-b68c-e99131f61b18</id>
+    </Folder>
+    <Folder Include="BVT\TC_722137">
+      <id>3fe29e15-39c7-47a6-967c-00cea19be7d8</id>
+    </Folder>
+    <Folder Include="BVT\TC_722140">
+      <id>7574a3c2-6902-4271-9d6f-c784d34a9585</id>
+    </Folder>
+    <Folder Include="BVT\TC_722142">
+      <id>74d47d27-af1c-437e-9940-2fd7b10cc21d</id>
+    </Folder>
+    <Folder Include="BVT\TC_722138">
+      <id>b4d527f8-a1a6-45b7-b873-4d09eafa3059</id>
+    </Folder>
+    <Folder Include="BVT\TC_722139">
+      <id>5683d93e-389b-4cd0-a960-efbecccd134e</id>
     </Folder>
     <Folder Include="BVT\TC_722145">
       <id>507e1fe9-b3aa-4282-8307-c5e66a10f8d3</id>

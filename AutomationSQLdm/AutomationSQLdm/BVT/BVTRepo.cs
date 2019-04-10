@@ -218,6 +218,7 @@ namespace AutomationSQLdm.BVT
             BVTRepoFolders.QueriesTabFolder _queriestab;
             BVTRepoFolders.DatabasesTabFolder _databasestab;
             BVTRepoFolders.ViewFolder _view;
+            BVTRepoFolders.ResourcesTabFolder _resourcestab;
             RepoItemInfo _radiosummaryInfo;
             RepoItemInfo _radiodetailsInfo;
             RepoItemInfo _radiolocksInfo;
@@ -245,6 +246,10 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _tbldbstempdbsummaryInfo;
             RepoItemInfo _tbldbsconfigurationInfo;
             RepoItemInfo _tbldbsfilesInfo;
+            TableLayoutPanelInfoClass _tablelayoutpanelInfo;
+            RepoItemInfo _tblresprocedurecacheInfo;
+            RepoItemInfo _ddlresfileactivityInfo;
+            RepoItemInfo _tblresserverwaitsInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -256,6 +261,7 @@ namespace AutomationSQLdm.BVT
                 _queriestab = new BVTRepoFolders.QueriesTabFolder(this);
                 _databasestab = new BVTRepoFolders.DatabasesTabFolder(this);
                 _view = new BVTRepoFolders.ViewFolder(this);
+                _resourcestab = new BVTRepoFolders.ResourcesTabFolder(this);
                 _radiosummaryInfo = new RepoItemInfo(this, "radioSummary", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "cd1b304b-88bd-448d-84b1-a47b878dc059");
                 _radiodetailsInfo = new RepoItemInfo(this, "radioDetails", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "514075e6-e49f-4bb1-bd46-69b8d3efb092");
                 _radiolocksInfo = new RepoItemInfo(this, "radioLocks", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Sessions']/toolbar[@automationid='sessionsTabViewsGroup']/container[@caption='']/radiobutton[3]", 30000, null, "d75d8732-b228-4244-aab9-8017060a5a68");
@@ -283,6 +289,108 @@ namespace AutomationSQLdm.BVT
                 _tbldbstempdbsummaryInfo = new RepoItemInfo(this, "tblDBSTempDBSummary", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/?/?/container[@controlname='DatabasesTempdbView_Fill_Panel']//table[@accessiblename='No Data Available']", 30000, null, "7d37f544-3be8-4586-8b73-df846e0d5e68");
                 _tbldbsconfigurationInfo = new RepoItemInfo(this, "tblDBSConfiguration", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']", 30000, null, "195a2ec4-962e-4d2e-b2b7-76d747894459");
                 _tbldbsfilesInfo = new RepoItemInfo(this, "tblDBSFiles", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='DatabasesFilesView']//table[@accessiblename='Loading...']", 30000, null, "8dd4598b-05d8-4588-a263-3ca1bb8adc88");
+                _tablelayoutpanelInfo = new TableLayoutPanelInfoClass(this);
+                _tblresprocedurecacheInfo = new RepoItemInfo(this, "tblRESProcedureCache", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ResourcesProcedureCacheView']/container[@controlname='ResourcesProcedureCacheView_Fill_Panel']//table[@accessiblerole='Table']", 30000, null, "797df68b-a71a-4e40-b8d7-b1986df3f57d");
+                _ddlresfileactivityInfo = new RepoItemInfo(this, "ddlRESFileActivity", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']//container[@controlname='ResourcesFileActivity']/?/?/combobox[@controlname='drivesComboBox']", 30000, null, "1a4b4b4a-508c-48c0-9f96-c688cad8d0cb");
+                _tblresserverwaitsInfo = new RepoItemInfo(this, "tblRESServerWaits", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']", 30000, null, "733500fd-1a67-4628-9b84-3c8f8c52ed24");
+            }
+
+            /// <summary>
+            /// The TableLayoutPanelInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("321b3786-1863-43a1-8448-b189780e9a73")]
+            public class TableLayoutPanelInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// TableLayoutPanelInfoClass class constructor.
+                /// </summary>
+                public TableLayoutPanelInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "TableLayoutPanel", "element[@automationid='viewContainer']/?/?/element[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='ResourcesMemoryView']//container[@controlname='tableLayoutPanel']", 30000, null, "321b3786-1863-43a1-8448-b189780e9a73")
+                { }
+
+                /// <summary>
+                /// Gets the RESCPU item image.
+                /// </summary>
+                /// <returns>The RESCPU image.</returns>
+                [RepositoryImage("09ee1a75-9323-4310-a384-d73ee606aba9")]
+                public CompressedImage GetRESCPU()
+                {
+                    return GetImage("09ee1a75-9323-4310-a384-d73ee606aba9");
+                }
+
+                /// <summary>
+                /// Gets the RESCPU item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("09ee1a75-9323-4310-a384-d73ee606aba9")]
+                public CompressedImage GetRESCPU(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("09ee1a75-9323-4310-a384-d73ee606aba9", cropRect);
+                }
+
+                /// <summary>
+                /// Gets the RESDisk item image.
+                /// </summary>
+                /// <returns>The RESDisk image.</returns>
+                [RepositoryImage("c56a9b49-3ad0-4971-93dd-94a62b527b5f")]
+                public CompressedImage GetRESDisk()
+                {
+                    return GetImage("c56a9b49-3ad0-4971-93dd-94a62b527b5f");
+                }
+
+                /// <summary>
+                /// Gets the RESDisk item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("c56a9b49-3ad0-4971-93dd-94a62b527b5f")]
+                public CompressedImage GetRESDisk(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("c56a9b49-3ad0-4971-93dd-94a62b527b5f", cropRect);
+                }
+
+                /// <summary>
+                /// Gets the RESMemory item image.
+                /// </summary>
+                /// <returns>The RESMemory image.</returns>
+                [RepositoryImage("b21a224c-1f1b-4156-b20e-3087f65664f3")]
+                public CompressedImage GetRESMemory()
+                {
+                    return GetImage("b21a224c-1f1b-4156-b20e-3087f65664f3");
+                }
+
+                /// <summary>
+                /// Gets the RESMemory item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("b21a224c-1f1b-4156-b20e-3087f65664f3")]
+                public CompressedImage GetRESMemory(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("b21a224c-1f1b-4156-b20e-3087f65664f3", cropRect);
+                }
+
+                /// <summary>
+                /// Gets the RESSummary item image.
+                /// </summary>
+                /// <returns>The RESSummary image.</returns>
+                [RepositoryImage("590a2a28-d6aa-429b-a319-3ea66feefca8")]
+                public CompressedImage GetRESSummary()
+                {
+                    return GetImage("590a2a28-d6aa-429b-a319-3ea66feefca8");
+                }
+
+                /// <summary>
+                /// Gets the RESSummary item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("590a2a28-d6aa-429b-a319-3ea66feefca8")]
+                public CompressedImage GetRESSummary(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("590a2a28-d6aa-429b-a319-3ea66feefca8", cropRect);
+                }
             }
 
             /// <summary>
@@ -958,6 +1066,102 @@ namespace AutomationSQLdm.BVT
             }
 
             /// <summary>
+            /// The TableLayoutPanel item.
+            /// </summary>
+            [RepositoryItem("321b3786-1863-43a1-8448-b189780e9a73")]
+            public virtual Ranorex.Container TableLayoutPanel
+            {
+                get
+                {
+                    return _tablelayoutpanelInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The TableLayoutPanel item info.
+            /// </summary>
+            [RepositoryItemInfo("321b3786-1863-43a1-8448-b189780e9a73")]
+            public virtual TableLayoutPanelInfoClass TableLayoutPanelInfo
+            {
+                get
+                {
+                    return _tablelayoutpanelInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblRESProcedureCache item.
+            /// </summary>
+            [RepositoryItem("797df68b-a71a-4e40-b8d7-b1986df3f57d")]
+            public virtual Ranorex.Table tblRESProcedureCache
+            {
+                get
+                {
+                    return _tblresprocedurecacheInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblRESProcedureCache item info.
+            /// </summary>
+            [RepositoryItemInfo("797df68b-a71a-4e40-b8d7-b1986df3f57d")]
+            public virtual RepoItemInfo tblRESProcedureCacheInfo
+            {
+                get
+                {
+                    return _tblresprocedurecacheInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ddlRESFileActivity item.
+            /// </summary>
+            [RepositoryItem("1a4b4b4a-508c-48c0-9f96-c688cad8d0cb")]
+            public virtual Ranorex.ComboBox ddlRESFileActivity
+            {
+                get
+                {
+                    return _ddlresfileactivityInfo.CreateAdapter<Ranorex.ComboBox>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ddlRESFileActivity item info.
+            /// </summary>
+            [RepositoryItemInfo("1a4b4b4a-508c-48c0-9f96-c688cad8d0cb")]
+            public virtual RepoItemInfo ddlRESFileActivityInfo
+            {
+                get
+                {
+                    return _ddlresfileactivityInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tblRESServerWaits item.
+            /// </summary>
+            [RepositoryItem("733500fd-1a67-4628-9b84-3c8f8c52ed24")]
+            public virtual Ranorex.Table tblRESServerWaits
+            {
+                get
+                {
+                    return _tblresserverwaitsInfo.CreateAdapter<Ranorex.Table>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tblRESServerWaits item info.
+            /// </summary>
+            [RepositoryItemInfo("733500fd-1a67-4628-9b84-3c8f8c52ed24")]
+            public virtual RepoItemInfo tblRESServerWaitsInfo
+            {
+                get
+                {
+                    return _tblresserverwaitsInfo;
+                }
+            }
+
+            /// <summary>
             /// The OverViewTab folder.
             /// </summary>
             [RepositoryFolder("b4198f1b-1b59-48c6-abc4-9ecd0d0d6a75")]
@@ -991,6 +1195,15 @@ namespace AutomationSQLdm.BVT
             public virtual BVTRepoFolders.ViewFolder View
             {
                 get { return _view; }
+            }
+
+            /// <summary>
+            /// The ResourcesTab folder.
+            /// </summary>
+            [RepositoryFolder("034be24c-6411-4b80-b23c-bbe4de9c452e")]
+            public virtual BVTRepoFolders.ResourcesTabFolder ResourcesTab
+            {
+                get { return _resourcestab; }
             }
         }
 
@@ -1748,6 +1961,254 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _txtovdechartInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ResourcesTabFolder folder.
+        /// </summary>
+        [RepositoryFolder("034be24c-6411-4b80-b23c-bbe4de9c452e")]
+        public partial class ResourcesTabFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _rgresmemoryInfo;
+            RepoItemInfo _rgresdiskInfo;
+            RepoItemInfo _rgressummaryInfo;
+            RepoItemInfo _rgrescpuInfo;
+            RepoItemInfo _rgresdisksizeInfo;
+            RepoItemInfo _rgresfileactivityInfo;
+            RepoItemInfo _rgresprocedurecacheInfo;
+            RepoItemInfo _rgresserverwaitsInfo;
+
+            /// <summary>
+            /// Creates a new ResourcesTab  folder.
+            /// </summary>
+            public ResourcesTabFolder(RepoGenBaseFolder parentFolder) :
+                    base("ResourcesTab", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Resources']", parentFolder, 30000, null, false, "034be24c-6411-4b80-b23c-bbe4de9c452e", "")
+            {
+                _rgresmemoryInfo = new RepoItemInfo(this, "rgRESMemory", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[3]", 30000, null, "6f4b0496-9605-4d05-88ae-2be5d3b04be8");
+                _rgresdiskInfo = new RepoItemInfo(this, "rgRESDisk", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[4]", 30000, null, "e8ed8090-a918-4055-b447-f7aaf937f50a");
+                _rgressummaryInfo = new RepoItemInfo(this, "rgRESSummary", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[1]", 30000, null, "b297426a-4f7a-4d09-9a56-e76f9ff4f6bc");
+                _rgrescpuInfo = new RepoItemInfo(this, "rgRESCPU", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[2]", 30000, null, "4a8b3996-3308-49e6-a78e-692165bb0cda");
+                _rgresdisksizeInfo = new RepoItemInfo(this, "rgRESDiskSize", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[5]", 30000, null, "f1121840-0b87-416e-8e31-33c58bc2027f");
+                _rgresfileactivityInfo = new RepoItemInfo(this, "rgRESFileActivity", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[6]", 30000, null, "f5a7695e-5d50-455e-9229-a5f9ceebcd83");
+                _rgresprocedurecacheInfo = new RepoItemInfo(this, "rgRESProcedureCache", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[7]", 30000, null, "13d7f25a-abec-49e9-b4b8-bd1272fbbab9");
+                _rgresserverwaitsInfo = new RepoItemInfo(this, "rgRESServerWaits", ".//toolbar[@automationid='resourcesTabViewsGroup']/container[@caption='']/radiobutton[8]", 30000, null, "2b85d241-2ac2-4ef8-badc-3a081653423a");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("034be24c-6411-4b80-b23c-bbe4de9c452e")]
+            public virtual Ranorex.TabPage Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("034be24c-6411-4b80-b23c-bbe4de9c452e")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESMemory item.
+            /// </summary>
+            [RepositoryItem("6f4b0496-9605-4d05-88ae-2be5d3b04be8")]
+            public virtual Ranorex.RadioButton rgRESMemory
+            {
+                get
+                {
+                    return _rgresmemoryInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESMemory item info.
+            /// </summary>
+            [RepositoryItemInfo("6f4b0496-9605-4d05-88ae-2be5d3b04be8")]
+            public virtual RepoItemInfo rgRESMemoryInfo
+            {
+                get
+                {
+                    return _rgresmemoryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESDisk item.
+            /// </summary>
+            [RepositoryItem("e8ed8090-a918-4055-b447-f7aaf937f50a")]
+            public virtual Ranorex.RadioButton rgRESDisk
+            {
+                get
+                {
+                    return _rgresdiskInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESDisk item info.
+            /// </summary>
+            [RepositoryItemInfo("e8ed8090-a918-4055-b447-f7aaf937f50a")]
+            public virtual RepoItemInfo rgRESDiskInfo
+            {
+                get
+                {
+                    return _rgresdiskInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESSummary item.
+            /// </summary>
+            [RepositoryItem("b297426a-4f7a-4d09-9a56-e76f9ff4f6bc")]
+            public virtual Ranorex.RadioButton rgRESSummary
+            {
+                get
+                {
+                    return _rgressummaryInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESSummary item info.
+            /// </summary>
+            [RepositoryItemInfo("b297426a-4f7a-4d09-9a56-e76f9ff4f6bc")]
+            public virtual RepoItemInfo rgRESSummaryInfo
+            {
+                get
+                {
+                    return _rgressummaryInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESCPU item.
+            /// </summary>
+            [RepositoryItem("4a8b3996-3308-49e6-a78e-692165bb0cda")]
+            public virtual Ranorex.RadioButton rgRESCPU
+            {
+                get
+                {
+                    return _rgrescpuInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESCPU item info.
+            /// </summary>
+            [RepositoryItemInfo("4a8b3996-3308-49e6-a78e-692165bb0cda")]
+            public virtual RepoItemInfo rgRESCPUInfo
+            {
+                get
+                {
+                    return _rgrescpuInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESDiskSize item.
+            /// </summary>
+            [RepositoryItem("f1121840-0b87-416e-8e31-33c58bc2027f")]
+            public virtual Ranorex.RadioButton rgRESDiskSize
+            {
+                get
+                {
+                    return _rgresdisksizeInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESDiskSize item info.
+            /// </summary>
+            [RepositoryItemInfo("f1121840-0b87-416e-8e31-33c58bc2027f")]
+            public virtual RepoItemInfo rgRESDiskSizeInfo
+            {
+                get
+                {
+                    return _rgresdisksizeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESFileActivity item.
+            /// </summary>
+            [RepositoryItem("f5a7695e-5d50-455e-9229-a5f9ceebcd83")]
+            public virtual Ranorex.RadioButton rgRESFileActivity
+            {
+                get
+                {
+                    return _rgresfileactivityInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESFileActivity item info.
+            /// </summary>
+            [RepositoryItemInfo("f5a7695e-5d50-455e-9229-a5f9ceebcd83")]
+            public virtual RepoItemInfo rgRESFileActivityInfo
+            {
+                get
+                {
+                    return _rgresfileactivityInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESProcedureCache item.
+            /// </summary>
+            [RepositoryItem("13d7f25a-abec-49e9-b4b8-bd1272fbbab9")]
+            public virtual Ranorex.RadioButton rgRESProcedureCache
+            {
+                get
+                {
+                    return _rgresprocedurecacheInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESProcedureCache item info.
+            /// </summary>
+            [RepositoryItemInfo("13d7f25a-abec-49e9-b4b8-bd1272fbbab9")]
+            public virtual RepoItemInfo rgRESProcedureCacheInfo
+            {
+                get
+                {
+                    return _rgresprocedurecacheInfo;
+                }
+            }
+
+            /// <summary>
+            /// The rgRESServerWaits item.
+            /// </summary>
+            [RepositoryItem("2b85d241-2ac2-4ef8-badc-3a081653423a")]
+            public virtual Ranorex.RadioButton rgRESServerWaits
+            {
+                get
+                {
+                    return _rgresserverwaitsInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The rgRESServerWaits item info.
+            /// </summary>
+            [RepositoryItemInfo("2b85d241-2ac2-4ef8-badc-3a081653423a")]
+            public virtual RepoItemInfo rgRESServerWaitsInfo
+            {
+                get
+                {
+                    return _rgresserverwaitsInfo;
                 }
             }
         }

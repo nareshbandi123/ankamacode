@@ -5,14 +5,16 @@
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\Steps.cs" />
     <Element value="BVT\BVTRepo.rxrep" />
-    <Element value="Configuration\Config.cs" />
-    <Element value="Grooming Modifications\Steps.cs" />
+    <Element value="BVT\Steps.cs" />
+    <Element value="BVT\TC_722135\PendingUpdateVerifythatResourcesServerWaitsviewisDisplayedSuccessfull.cs" />
+    <Element value="BVT\TC_722138\PendingUpdateVerifythatResourcesDiskviewisDisplayedSuccessfully.cs" />
+    <Element value="BVT\TC_722136\VerifyResourcesProcedureCacheViewIsDisplayedSuccessfully.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
       <runOnBuild value="False" />
     </Properties>
+    <Array name="recentusercodeselections" />
   </Properties>
 </Properties>

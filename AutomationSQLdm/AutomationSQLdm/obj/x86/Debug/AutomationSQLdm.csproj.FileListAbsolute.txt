@@ -9,6 +9,8 @@ C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm
 C:\AutomationSQLdm\AutomationSQLdm\AutomationSQLdm\obj\x86\Debug\AutomationSQLdm.pdb
 C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtmg
 C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.rxtst
+C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\AutomationSQLdmRepository7bd21acd.rximgres
+C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\RepositoryImages\BVTRepo66deb29b.rximgres
 C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe.config
 C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.exe
 C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\bin\Debug\AutomationSQLdm.pdb

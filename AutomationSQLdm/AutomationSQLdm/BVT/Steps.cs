@@ -1,26 +1,24 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Drawing;
-using System.Threading;
-using WinForms = System.Windows.Forms;
-
-using Ranorex;
-using Ranorex.Core;
-using Ranorex.Core.Testing;
-
-using AutomationSQLdm.Commons;
-using AutomationSQLdm.Extensions;
-using AutomationSQLdm.Configuration;
-
+using System.Collections.Specialized;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Collections.Specialized;
-using AutomationSQLdm.DataBaseOperations;
+using System.Drawing;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 
+using WinForms = System.Windows.Forms;
+using AutomationSQLdm.Commons;
+using AutomationSQLdm.Configuration;
+using AutomationSQLdm.DataBaseOperations;
+using AutomationSQLdm.Extensions;
+using Ranorex;
+using Ranorex.Core;
+using Ranorex.Core.Repository;
+using Ranorex.Core.Testing;
 
 namespace AutomationSQLdm.BVT
 {
@@ -792,6 +790,315 @@ namespace AutomationSQLdm.BVT
 				}
 			}
 			
+			
+			
+			 public static void ClickOnResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabResourcesInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tabResources.Click();
+				    Reports.ReportLog("Successfully Clicked On Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnResourcesTab :" + ex.Message);
+				}
+			}
+			 
+			  public static void ClickOnSummaryInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESSummaryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESSummary.Click();
+				    Reports.ReportLog("Successfully Clicked On Summary In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnSummaryInResourcesTab :" + ex.Message);
+				}
+			}
+			  
+			    public static void ClickOnCPUInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESCPUInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESCPU.Click();
+				    Reports.ReportLog("Successfully Clicked On CPU In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnCPUInResourcesTab :" + ex.Message);
+				}
+			}
+			 
+			 public static void ClickOnMemoryInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESMemoryInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESMemory.Click();
+				    Reports.ReportLog("Successfully Clicked On Memory In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnMemoryInResourcesTab :" + ex.Message);
+				}
+			}
+			 
+			  public static void ClickOnDiskInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESDiskInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESDisk.Click();
+				    Reports.ReportLog("Successfully Clicked On Disk In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnDiskInResourcesTab :" + ex.Message);
+				}
+			}
+			  
+			   public static void ClickOnDiskSizeInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESDiskSizeInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESDiskSize.Click();
+				    Reports.ReportLog("Successfully Clicked On DiskSize In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnDiskSizeInResourcesTab :" + ex.Message);
+				}
+			} 
+			   
+			    public static void ClickOnFileActivityInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESFileActivityInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESFileActivity.Click();
+				    Reports.ReportLog("Successfully Clicked On FileActivity In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnFileActivityInResourcesTab :" + ex.Message);
+				}
+			}   
+			
+			    public static void ClickOnProcedureCacheInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESProcedureCacheInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESProcedureCache.Click();
+				    Reports.ReportLog("Successfully Clicked On ProcedureCache In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnProcedureCacheInResourcesTab :" + ex.Message);
+				}
+			}   
+			  
+
+			    public static void ClickOnServerWaitsInResourcesTab()
+			{
+				try 
+				{
+					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESServerWaitsInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ResourcesTab.rgRESServerWaits.Click();
+				    Reports.ReportLog("Successfully Clicked On ServerWaits In Resources Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnServerWaitsInResourcesTab :" + ex.Message);
+				}
+			} 
+			 
+			  public static void VerifySummaryViewInResources()
+			{
+				try 
+				{ 
+					
+		            if(repo.SQLdm.TableLayoutPanelInfo.Exists())
+		             {
+		                CompressedImage rsSummary = repo.SQLdm.TableLayoutPanelInfo.GetRESSummary();
+		                Imaging.FindOptions options = Imaging.FindOptions.Default;
+		                RepoItemInfo info = repo.SQLdm.TableLayoutPanelInfo;
+		                bool isvalid = Validate.ContainsImage(info, rsSummary, options,"Summary View image comparision in Resources Tab", false);
+			         }
+			    }
+	            catch (Exception ex)
+	            {
+	                throw new Exception("Failed : VerifySummaryViewInResources  : " + ex.Message);
+	            }
+
+			}
+				
+			  public static void VerifyCPUViewInResources()
+			{
+				try 
+				{ 
+					
+		            if(repo.SQLdm.TableLayoutPanelInfo.Exists())
+		             {
+		                CompressedImage rsCPU = repo.SQLdm.TableLayoutPanelInfo.GetRESCPU();
+		                Imaging.FindOptions options = Imaging.FindOptions.Default;
+		                RepoItemInfo info = repo.SQLdm.TableLayoutPanelInfo;
+		                bool isvalid = Validate.ContainsImage(info, rsCPU, options,"CPU View image comparision in Resources Tab", false);
+			         }
+			    }
+	            catch (Exception ex)
+	            {
+	                throw new Exception("Failed : VerifyCPUViewInResources  : " + ex.Message);
+	            }
+
+			}			  
+			  
+			  public static void VerifyMemoryViewInResources()
+			{
+				try 
+				{ 
+					
+		            if(repo.SQLdm.TableLayoutPanelInfo.Exists())
+		             {
+		                CompressedImage rsMemory = repo.SQLdm.TableLayoutPanelInfo.GetRESMemory();
+		                Imaging.FindOptions options = Imaging.FindOptions.Default;
+		                RepoItemInfo info = repo.SQLdm.TableLayoutPanelInfo;
+		                bool isvalid = Validate.ContainsImage(info, rsMemory, options,"Memory View image comparision in Resources Tab", false);
+			         }
+			    }
+	            catch (Exception ex)
+	            {
+	                throw new Exception("Failed : VerifyMemoryViewInResources  : " + ex.Message);
+	            }
+
+			}
+			    
+			    
+			  public static void VerifyDiskViewInResources()
+			{
+				try 
+				{ 
+					
+		            if(repo.SQLdm.TableLayoutPanelInfo.Exists())
+		             {
+		                CompressedImage rsDisk = repo.SQLdm.TableLayoutPanelInfo.GetRESDisk();
+		                Imaging.FindOptions options = Imaging.FindOptions.Default;
+		                RepoItemInfo info = repo.SQLdm.TableLayoutPanelInfo;
+		                bool isvalid = Validate.ContainsImage(info, rsDisk, options,"Disk View image comparision in Resources Tab", false);
+			         }
+			    }
+	            catch (Exception ex)
+	            {
+	                throw new Exception("Failed : VerifyDiskViewInResources  : " + ex.Message);
+	            }
+
+			}
+			
+
+			 public static void VerifyFileActivityInResources()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.ddlRESFileActivityInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.ddlRESFileActivityInfo.Exists())
+					{
+						Reports.ReportLog("File Activity Displayed Successfully In Resources", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("File Activity  Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyFileActivityInResources :" + ex.Message);
+				}
+			}			  
+			
+           public static void VerifyProcedureCacheInResources()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblRESProcedureCacheInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblRESProcedureCacheInfo.Exists())
+					{
+						repo.SQLdm.tblRESProcedureCache.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Procedure Cache In Resources Is:" + repo.SQLdm.tblRESProcedureCache.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Procedure Cache Displayed Successfully In Resources", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Procedure Cache Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyProcedureCacheInResources :" + ex.Message);
+				}
+			}			  
+			  
+           
+            public static void VerifyServerWaitsInResources()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblRESServerWaitsInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblRESServerWaitsInfo.Exists())
+					{
+						repo.SQLdm.tblRESServerWaits.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Server Waits In Resources Is:" + repo.SQLdm.tblRESServerWaits.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Server Waits Displayed Successfully In Resources", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Server Waits Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyServerWaitsInResources :" + ex.Message);
+				}
+			}
+			  
           //--------------------------------------
          
           

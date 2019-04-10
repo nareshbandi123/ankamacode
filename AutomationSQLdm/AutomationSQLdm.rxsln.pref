@@ -6,6 +6,16 @@
       <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
       <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
+      <string>56c0efec-564d-4a04-86a2-443b6eab88b5</string>
+      <string>9048b278-0637-4d23-b68c-e99131f61b18</string>
+      <string>3fe29e15-39c7-47a6-967c-00cea19be7d8</string>
+      <string>b4d527f8-a1a6-45b7-b873-4d09eafa3059</string>
+      <string>5683d93e-389b-4cd0-a960-efbecccd134e</string>
+      <string>7574a3c2-6902-4271-9d6f-c784d34a9585</string>
+      <string>507e1fe9-b3aa-4282-8307-c5e66a10f8d3</string>
+      <string>7b9fbf10-a042-432e-9e04-1cdc7a8d3abd</string>
+      <string>4111d808-51c3-433a-939b-9d26c6cd0de9</string>
+      <string>d1768a1d-b09a-4ad6-812d-8a8992841931</string>
       <string>1547d1f9-20da-494f-9a40-8022dbdc47b8</string>
       <string>e68d4157-10af-40a5-a364-541e5b41e18d</string>
       <string>2393e6f1-1261-4d50-a05a-2442c4664fd5</string>
@@ -20,6 +30,6 @@
       <string>05a7eb2c-c01f-4b28-8723-e1fbd75a8fdf</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Extensions[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[BVT[]Commons[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\AutomationSQLdm.rxtst&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT\TC_722142" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>
