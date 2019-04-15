@@ -1,15 +1,15 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="AutomationSQLdm.rxtst" />
+    <Element value="Grooming Modifications\Steps.cs" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Grooming Modifications\TC_721956\VerifyDBSizeTableIsAggregated.cs" />
+    <Element value="DataBaseOperations\DataAccess.cs" />
+    <Element value="Grooming Modifications\Steps.cs" />
     <Element value="AutomationSQLdm.rxtst" />
     <Element value="BVT\BVTRepo.rxrep" />
     <Element value="BVT\Steps.cs" />
-    <Element value="BVT\TC_722135\PendingUpdateVerifythatResourcesServerWaitsviewisDisplayedSuccessfull.cs" />
-    <Element value="BVT\TC_722138\PendingUpdateVerifythatResourcesDiskviewisDisplayedSuccessfully.cs" />
-    <Element value="BVT\TC_722136\VerifyResourcesProcedureCacheViewIsDisplayedSuccessfully.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

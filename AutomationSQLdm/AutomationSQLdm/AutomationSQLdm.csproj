@@ -291,6 +291,18 @@
     <Compile Include="Program.cs">
       <id>5814e780-ff95-4e51-a14a-9bc079e4f89d</id>
     </Compile>
+    <Compile Include="QueryPlan\QueryPlanRepo.cs">
+      <BoundTo>719d4a99-725d-4462-ab3c-74914624ddf7</BoundTo>
+      <DependentUpon>QueryPlanRepo.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>97a8afb4-9e28-4f00-93d6-580ee8a9ddc0</id>
+    </Compile>
+    <Compile Include="QueryPlan\Steps.cs">
+      <id>ad40b338-a2d0-49dc-bf86-21283e65d907</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs">
+      <id>b021320b-54a0-4cc6-a42b-f89ea87a0254</id>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -339,6 +351,17 @@
       <id>c328c137-6188-44c6-895f-7710264ab8d9</id>
       <repoid>5a184cd9-40f9-4651-a234-6802be30f893</repoid>
       <reporootid>16a56f01-8f73-4e50-8864-86e658161df7</reporootid>
+    </None>
+    <None Include="QueryPlan\QueryPlanRepo.rximg">
+      <BoundTo>719d4a99-725d-4462-ab3c-74914624ddf7</BoundTo>
+      <DependentUpon>QueryPlanRepo.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>2bb3ed6c-9e4b-492b-a5f7-ae6b4e8bb7f4</id>
+    </None>
+    <None Include="QueryPlan\QueryPlanRepo.rxrep">
+      <id>719d4a99-725d-4462-ab3c-74914624ddf7</id>
+      <repoid>15534317-1b35-45c5-bf69-1f843eb766cb</repoid>
+      <reporootid>425f0314-efb0-4ba1-80d4-752d599c9284</reporootid>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -489,6 +512,12 @@
     </Folder>
     <Folder Include="BVT">
       <id>435ace51-31ae-4bef-bf4d-5d490d806462</id>
+    </Folder>
+    <Folder Include="QueryPlan">
+      <id>3657fc4e-b055-465d-a700-e74568c740df</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722069">
+      <id>03966b51-a673-4015-846c-5b8827fc1bce</id>
     </Folder>
     <Folder Include="SQLQueries">
       <id>8a4a7c66-ece1-4b70-b784-bb7bb3876280</id>

@@ -88,6 +88,10 @@ rxversion="8.2">
 			name="Verify_three_metrics_Disk_Space,_Table_Space,_Database_space_associated_tables">
 			</testcase>
 			<testcase
+			id="108e23af-36b4-40f8-a0ea-7f4cae06e41d"
+			name="Query_Monitor_Top_Query_Plans:_Input_invalid_data_in_collect_query_plans_count_and_verify_changes_ca">
+			</testcase>
+			<testcase
 			id="158b2417-a6c5-4f95-af24-460568a301c2"
 			name="Groom_forecasting_data_older_than_XX_days_option_is_shown">
 			</testcase>
@@ -602,6 +606,10 @@ rxversion="8.2">
 			showinvisiblechars="True">
 			</testsuite>
 			<smartfoldernode
+			id="72cd1202-ee87-46b5-b6c4-fb388f24b6c0"
+			name="T722069">
+			</smartfoldernode>
+			<smartfoldernode
 			id="7346b60e-e49c-4b0c-bc41-352bff8b3973"
 			name="T722155">
 			</smartfoldernode>
@@ -653,6 +661,12 @@ rxversion="8.2">
 			id="7be18328-8708-4bfc-add3-d789530efb05"
 			name="setup">
 			</setup>
+			<testmodule
+			id="7d3e1aeb-c796-4e6c-acc7-8f49c4276270"
+			name="CloseSQLdm"
+			ref="0fe8941e-6526-477a-bc6f-cb90c434e430"
+			type="UserCode">
+			</testmodule>
 			<testcase
 			id="7d4cf63f-2fbd-4a89-9b0a-72baf217da79"
 			name="Verify_that_Overview_Details_is_displayed_successfully">
@@ -955,6 +969,10 @@ rxversion="8.2">
 			id="ba0e5972-d70b-4d24-989e-bc2d56a6c210"
 			name="teardown">
 			</teardown>
+			<teardown
+			id="bb0954f3-8941-463b-b56b-100522085cec"
+			name="teardown">
+			</teardown>
 			<testcase
 			id="bc68ef6e-1027-4245-ace3-c338fcdf3072"
 			name="Verify_that_Queries_Statement_Mode_view_is_displayed_successfully">
@@ -1017,6 +1035,12 @@ rxversion="8.2">
 			id="c7e4877a-46b9-40b8-a3c0-c73407ff7421"
 			name="T722160">
 			</smartfoldernode>
+			<testmodule
+			id="c8590190-b8bf-45f1-bb3a-8ba07a72b537"
+			name="Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved"
+			ref="8ad4418d-28e0-4c10-bb72-c0138eff7f8c"
+			type="UserCode">
+			</testmodule>
 			<setup
 			id="c86f417e-62b4-4ff8-82e4-603a8fa53c5b"
 			name="setup">
@@ -1057,6 +1081,12 @@ rxversion="8.2">
 			</testcase>
 			<testmodule
 			id="cee6f432-f418-48dc-9dd3-8c51ab065126"
+			name="OpenSQLdm"
+			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
+			type="UserCode">
+			</testmodule>
+			<testmodule
+			id="d01d4141-e111-4d18-b74d-a9e4b1a0980a"
 			name="OpenSQLdm"
 			ref="f749ea84-58c0-4b06-b370-33030d553c6d"
 			type="UserCode">
@@ -1119,6 +1149,10 @@ rxversion="8.2">
 			id="dee800eb-8a23-4991-9bc3-288a4edf33ab"
 			name="_Verify_that_Queries_Query_Waits_view_is_displayed_successfully">
 			</testcase>
+			<setup
+			id="e00c3c30-9251-4719-846f-9d7bfbc318c2"
+			name="setup">
+			</setup>
 			<testmodule
 			id="e0f7cc0b-73a5-4f49-8464-77328a6349fe"
 			name="OpenSQLdm"
@@ -2389,6 +2423,34 @@ rxversion="8.2">
 							</testmodule>
 						</teardown>
 					</smartfoldernode>
+					<smartfoldernode
+					id="72cd1202-ee87-46b5-b6c4-fb388f24b6c0"
+					name="T722069">
+						<setup
+						id="e00c3c30-9251-4719-846f-9d7bfbc318c2"
+						name="setup">
+							<testmodule
+							id="d01d4141-e111-4d18-b74d-a9e4b1a0980a"
+							name="OpenSQLdm">
+							</testmodule>
+						</setup>
+						<testcase
+						id="108e23af-36b4-40f8-a0ea-7f4cae06e41d"
+						name="Query_Monitor_Top_Query_Plans:_Input_invalid_data_in_collect_query_plans_count_and_verify_changes_ca">
+							<testmodule
+							id="c8590190-b8bf-45f1-bb3a-8ba07a72b537"
+							name="Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved">
+							</testmodule>
+						</testcase>
+						<teardown
+						id="bb0954f3-8941-463b-b56b-100522085cec"
+						name="teardown">
+							<testmodule
+							id="7d3e1aeb-c796-4e6c-acc7-8f49c4276270"
+							name="CloseSQLdm">
+							</testmodule>
+						</teardown>
+					</smartfoldernode>
 				</testcase>
 			</testsuite>
 		</childhierarchy>
@@ -2399,6 +2461,15 @@ rxversion="8.2">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
+			<testcontainer
+			id="108e23af-36b4-40f8-a0ea-7f4cae06e41d">
+			</testcontainer>
+			<testcontainer
+			id="5e3b329f-982d-4a6d-9158-0eed5778ea4f">
+			</testcontainer>
+			<testcontainer
+			id="72cd1202-ee87-46b5-b6c4-fb388f24b6c0">
+			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>
