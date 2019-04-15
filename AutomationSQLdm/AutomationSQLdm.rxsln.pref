@@ -28,8 +28,10 @@
       <string>673820d4-216f-4c0d-a597-589876e57c54</string>
       <string>447b99ef-0594-4623-859b-fc50b9413151</string>
       <string>05a7eb2c-c01f-4b28-8723-e1fbd75a8fdf</string>
+      <string>3657fc4e-b055-465d-a700-e74568c740df</string>
+      <string>03966b51-a673-4015-846c-5b8827fc1bce</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[Commons[]Grooming Modifications[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\Grooming Modifications\Steps.cs&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[BVT[]QueryPlan[TC_722069[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\QueryPlan\QueryPlanRepo.rxrep&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT\TC_722136" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

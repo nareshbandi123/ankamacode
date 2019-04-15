@@ -40,6 +40,13 @@ namespace AutomationSQLdm.QueryPlan.TC_722069
         		Steps.SelectConnectRepoOption();
         		Steps.ClickOnConnect();
         		Steps.SelectServer(Config.ServerOptions_CMWIN2016S8);
+        		Steps.ClickOnQueriesTab();
+        		Steps.ClickOnSignatureMode();
+        		Steps.CheckEnableQueryMonitor();
+        		//Steps.VerifyQueryPlansStatus("enable");
+        		//Steps.EnterTextInSelectTop("1");
+        		//Steps.ClickOnOnInMSSP();
+        		
         		
         	} 
         	catch (Exception ex)

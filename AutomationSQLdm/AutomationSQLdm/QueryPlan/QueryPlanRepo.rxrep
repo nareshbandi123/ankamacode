@@ -97,7 +97,7 @@ rxversion="8.2">
 			</basepath>
 		</appfolder>
 		<appfolder
-		capname="container"
+		capname="form"
 		id="0fe828ef-188b-4726-816b-908ddd4dcbf9"
 		isrooted="True"
 		name="MonitoredSQLServerProperties"
@@ -115,47 +115,47 @@ rxversion="8.2">
 				id="86342f0c-f63e-4805-82c0-16926a4534dd"
 				name="rgCQDUsingQueryStore"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseQueryStore']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseQueryStore']
 				</item>
 				<item
 				capname="radiobutton"
 				id="2684fc45-e00b-4db1-b18d-f18ccb47b9fe"
 				name="rgCQDUsingExtendedEvents"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseExtendedEvents']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseExtendedEvents']
 				</item>
 				<item
 				capname="radiobutton"
 				id="f9d05d15-4ca4-48a2-97db-a9b6e51607f1"
 				name="rgCQDUsingTrace"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseTrace']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseTrace']
 				</item>
 				<item
 				capname="checkbox"
 				id="a6ff82fd-1d86-4797-af10-0e33ae80411f"
 				name="cbCollectActualQueryPlans"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectQueryPlans']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectQueryPlans']
 				</item>
 				<item
 				capname="checkbox"
 				id="174b46fd-671a-4166-ade6-60932113577b"
 				name="cbCollectEstimatedQueryPlans"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectEstimatedQueryPlans']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectEstimatedQueryPlans']
+				</item>
+				<item
+				capname="checkbox"
+				id="f08702af-39df-45fc-a33c-286f1d10133b"
+				name="cbMSSPEnableQueryMonitor"
+				searchtimeout="30000ms">
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']//container[@controlname='tableLayoutPanel17']/checkbox[@controlname='enableQueryMonitorTraceCheckBox']
 				</item>
 				<basepath>
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']
 				</basepath>
 			</folder>
-			<item
-			capname="checkbox"
-			id="f08702af-39df-45fc-a33c-286f1d10133b"
-			name="cbMSSPEnableQueryMonitor"
-			searchtimeout="30000ms">
-				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel17']/checkbox[@controlname='enableQueryMonitorTraceCheckBox']
-			</item>
 			<folder
 			capname="container"
 			id="53519678-5c76-4a2f-8537-22eb978ce062"
@@ -168,49 +168,63 @@ rxversion="8.2">
 				id="e987797f-ecff-47ac-881f-3b4c10bd04a9"
 				name="txtPPDuration"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='durationThresholdSpinner']/text[@controlname='upDownEdit']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='durationThresholdSpinner']/text[@controlname='upDownEdit']
 				</item>
 				<item
 				capname="text"
 				id="91a6652d-e929-4b3f-80c7-3e10f2ff7250"
 				name="txtPPLogicalDiskReads"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='logicalReadsThresholdSpinner']/text[@controlname='upDownEdit']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='logicalReadsThresholdSpinner']/text[@controlname='upDownEdit']
 				</item>
 				<item
 				capname="text"
 				id="ac2a74df-b58f-435f-9968-53227f66f0c0"
 				name="txtPPCPUUsage"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='cpuThresholdSpinner']/text[@controlname='upDownEdit']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='cpuThresholdSpinner']/text[@controlname='upDownEdit']
 				</item>
 				<item
 				capname="text"
 				id="ff7b6a58-395a-411c-af8a-e8471c18dd0a"
 				name="txtPPPhysicalDiskWrites"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='physicalWritesThresholdSpinner']/text[@controlname='upDownEdit']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='physicalWritesThresholdSpinner']/text[@controlname='upDownEdit']
 				</item>
 				<item
 				capname="text"
 				id="5acdce90-a84c-41d4-ae66-dff16e260784"
-				name="txtPPTopPlan"
+				name="txtPPQueryPlan"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='topPlanSpinner']/text[@controlname='upDownEdit']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//container[@controlname='topPlanSpinner']/text[@controlname='upDownEdit']
 				</item>
 				<item
 				capname="combobox"
 				id="effa3ba9-fec7-4d8d-b111-ed7ad8576798"
 				name="ddlPPPlansBy"
 				searchtimeout="30000ms">
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']
 				</item>
 				<basepath>
-					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']
+					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']
 				</basepath>
 			</folder>
+			<item
+			capname="button"
+			id="13b47ba1-9cc6-4d2e-9ad7-55fd1cf97087"
+			name="btnMSSPOk"
+			searchtimeout="30000ms">
+				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//button[@controlname='okButton']
+			</item>
+			<item
+			capname="button"
+			id="a943eb34-0451-44cf-82b4-d0dde07eaeec"
+			name="btnMSSPCancel"
+			searchtimeout="30000ms">
+				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//button[@controlname='cancelButton']
+			</item>
 			<basepath>
-				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']
+				//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']
 			</basepath>
 		</appfolder>
 		<basepath>

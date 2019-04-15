@@ -422,28 +422,30 @@ namespace AutomationSQLdm.QueryPlan
         {
             QueryPlanRepoFolders.PnlQueryMonitorFolder _pnlquerymonitor;
             QueryPlanRepoFolders.PnlPoorlyPerformingFolder _pnlpoorlyperforming;
-            RepoItemInfo _cbmsspenablequerymonitorInfo;
+            RepoItemInfo _btnmsspokInfo;
+            RepoItemInfo _btnmsspcancelInfo;
 
             /// <summary>
             /// Creates a new MonitoredSQLServerProperties  folder.
             /// </summary>
             public MonitoredSQLServerPropertiesAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("MonitoredSQLServerProperties", "//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']", parentFolder, 30000, null, true, "0fe828ef-188b-4726-816b-908ddd4dcbf9", "")
+                    base("MonitoredSQLServerProperties", "//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']", parentFolder, 30000, null, true, "0fe828ef-188b-4726-816b-908ddd4dcbf9", "")
             {
                 _pnlquerymonitor = new QueryPlanRepoFolders.PnlQueryMonitorFolder(this);
                 _pnlpoorlyperforming = new QueryPlanRepoFolders.PnlPoorlyPerformingFolder(this);
-                _cbmsspenablequerymonitorInfo = new RepoItemInfo(this, "cbMSSPEnableQueryMonitor", ".//container[@controlname='tableLayoutPanel17']/checkbox[@controlname='enableQueryMonitorTraceCheckBox']", 30000, null, "f08702af-39df-45fc-a33c-286f1d10133b");
+                _btnmsspokInfo = new RepoItemInfo(this, "btnMSSPOk", ".//button[@controlname='okButton']", 30000, null, "13b47ba1-9cc6-4d2e-9ad7-55fd1cf97087");
+                _btnmsspcancelInfo = new RepoItemInfo(this, "btnMSSPCancel", ".//button[@controlname='cancelButton']", 30000, null, "a943eb34-0451-44cf-82b4-d0dde07eaeec");
             }
 
             /// <summary>
             /// The Self item.
             /// </summary>
             [RepositoryItem("0fe828ef-188b-4726-816b-908ddd4dcbf9")]
-            public virtual Ranorex.Container Self
+            public virtual Ranorex.Form Self
             {
                 get
                 {
-                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
                 }
             }
 
@@ -460,26 +462,50 @@ namespace AutomationSQLdm.QueryPlan
             }
 
             /// <summary>
-            /// The cbMSSPEnableQueryMonitor item.
+            /// The btnMSSPOk item.
             /// </summary>
-            [RepositoryItem("f08702af-39df-45fc-a33c-286f1d10133b")]
-            public virtual Ranorex.CheckBox cbMSSPEnableQueryMonitor
+            [RepositoryItem("13b47ba1-9cc6-4d2e-9ad7-55fd1cf97087")]
+            public virtual Ranorex.Button btnMSSPOk
             {
                 get
                 {
-                    return _cbmsspenablequerymonitorInfo.CreateAdapter<Ranorex.CheckBox>(true);
+                    return _btnmsspokInfo.CreateAdapter<Ranorex.Button>(true);
                 }
             }
 
             /// <summary>
-            /// The cbMSSPEnableQueryMonitor item info.
+            /// The btnMSSPOk item info.
             /// </summary>
-            [RepositoryItemInfo("f08702af-39df-45fc-a33c-286f1d10133b")]
-            public virtual RepoItemInfo cbMSSPEnableQueryMonitorInfo
+            [RepositoryItemInfo("13b47ba1-9cc6-4d2e-9ad7-55fd1cf97087")]
+            public virtual RepoItemInfo btnMSSPOkInfo
             {
                 get
                 {
-                    return _cbmsspenablequerymonitorInfo;
+                    return _btnmsspokInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnMSSPCancel item.
+            /// </summary>
+            [RepositoryItem("a943eb34-0451-44cf-82b4-d0dde07eaeec")]
+            public virtual Ranorex.Button btnMSSPCancel
+            {
+                get
+                {
+                    return _btnmsspcancelInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnMSSPCancel item info.
+            /// </summary>
+            [RepositoryItemInfo("a943eb34-0451-44cf-82b4-d0dde07eaeec")]
+            public virtual RepoItemInfo btnMSSPCancelInfo
+            {
+                get
+                {
+                    return _btnmsspcancelInfo;
                 }
             }
 
@@ -513,18 +539,20 @@ namespace AutomationSQLdm.QueryPlan
             RepoItemInfo _rgcqdusingtraceInfo;
             RepoItemInfo _cbcollectactualqueryplansInfo;
             RepoItemInfo _cbcollectestimatedqueryplansInfo;
+            RepoItemInfo _cbmsspenablequerymonitorInfo;
 
             /// <summary>
             /// Creates a new pnlQueryMonitor  folder.
             /// </summary>
             public PnlQueryMonitorFolder(RepoGenBaseFolder parentFolder) :
-                    base("pnlQueryMonitor", ".//container[@controlname='queryMonitorPropertyPage']", parentFolder, 30000, null, false, "522c64dd-76cf-4f3d-92c1-1d797f12e106", "")
+                    base("pnlQueryMonitor", ".//container[@controlname='propertiesControl']//container[@controlname='queryMonitorPropertyPage']", parentFolder, 30000, null, false, "522c64dd-76cf-4f3d-92c1-1d797f12e106", "")
             {
                 _rgcqdusingquerystoreInfo = new RepoItemInfo(this, "rgCQDUsingQueryStore", ".//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseQueryStore']", 30000, null, "86342f0c-f63e-4805-82c0-16926a4534dd");
                 _rgcqdusingextendedeventsInfo = new RepoItemInfo(this, "rgCQDUsingExtendedEvents", ".//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseExtendedEvents']", 30000, null, "2684fc45-e00b-4db1-b18d-f18ccb47b9fe");
                 _rgcqdusingtraceInfo = new RepoItemInfo(this, "rgCQDUsingTrace", ".//container[@controlname='tableLayoutPanel19']/radiobutton[@controlname='rButtonUseTrace']", 30000, null, "f9d05d15-4ca4-48a2-97db-a9b6e51607f1");
                 _cbcollectactualqueryplansInfo = new RepoItemInfo(this, "cbCollectActualQueryPlans", ".//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectQueryPlans']", 30000, null, "a6ff82fd-1d86-4797-af10-0e33ae80411f");
                 _cbcollectestimatedqueryplansInfo = new RepoItemInfo(this, "cbCollectEstimatedQueryPlans", ".//container[@controlname='tableLayoutPanel19']/checkbox[@controlname='chkCollectEstimatedQueryPlans']", 30000, null, "174b46fd-671a-4166-ade6-60932113577b");
+                _cbmsspenablequerymonitorInfo = new RepoItemInfo(this, "cbMSSPEnableQueryMonitor", ".//container[@controlname='tableLayoutPanel17']/checkbox[@controlname='enableQueryMonitorTraceCheckBox']", 30000, null, "f08702af-39df-45fc-a33c-286f1d10133b");
             }
 
             /// <summary>
@@ -670,6 +698,30 @@ namespace AutomationSQLdm.QueryPlan
                     return _cbcollectestimatedqueryplansInfo;
                 }
             }
+
+            /// <summary>
+            /// The cbMSSPEnableQueryMonitor item.
+            /// </summary>
+            [RepositoryItem("f08702af-39df-45fc-a33c-286f1d10133b")]
+            public virtual Ranorex.CheckBox cbMSSPEnableQueryMonitor
+            {
+                get
+                {
+                    return _cbmsspenablequerymonitorInfo.CreateAdapter<Ranorex.CheckBox>(true);
+                }
+            }
+
+            /// <summary>
+            /// The cbMSSPEnableQueryMonitor item info.
+            /// </summary>
+            [RepositoryItemInfo("f08702af-39df-45fc-a33c-286f1d10133b")]
+            public virtual RepoItemInfo cbMSSPEnableQueryMonitorInfo
+            {
+                get
+                {
+                    return _cbmsspenablequerymonitorInfo;
+                }
+            }
         }
 
         /// <summary>
@@ -682,20 +734,20 @@ namespace AutomationSQLdm.QueryPlan
             RepoItemInfo _txtpplogicaldiskreadsInfo;
             RepoItemInfo _txtppcpuusageInfo;
             RepoItemInfo _txtppphysicaldiskwritesInfo;
-            RepoItemInfo _txtpptopplanInfo;
+            RepoItemInfo _txtppqueryplanInfo;
             RepoItemInfo _ddlppplansbyInfo;
 
             /// <summary>
             /// Creates a new pnlPoorlyPerforming  folder.
             /// </summary>
             public PnlPoorlyPerformingFolder(RepoGenBaseFolder parentFolder) :
-                    base("pnlPoorlyPerforming", ".//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']", parentFolder, 30000, null, false, "53519678-5c76-4a2f-8537-22eb978ce062", "")
+                    base("pnlPoorlyPerforming", ".//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']", parentFolder, 30000, null, false, "53519678-5c76-4a2f-8537-22eb978ce062", "")
             {
                 _txtppdurationInfo = new RepoItemInfo(this, "txtPPDuration", ".//container[@controlname='durationThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "e987797f-ecff-47ac-881f-3b4c10bd04a9");
                 _txtpplogicaldiskreadsInfo = new RepoItemInfo(this, "txtPPLogicalDiskReads", ".//container[@controlname='logicalReadsThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "91a6652d-e929-4b3f-80c7-3e10f2ff7250");
                 _txtppcpuusageInfo = new RepoItemInfo(this, "txtPPCPUUsage", ".//container[@controlname='cpuThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "ac2a74df-b58f-435f-9968-53227f66f0c0");
                 _txtppphysicaldiskwritesInfo = new RepoItemInfo(this, "txtPPPhysicalDiskWrites", ".//container[@controlname='physicalWritesThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "ff7b6a58-395a-411c-af8a-e8471c18dd0a");
-                _txtpptopplanInfo = new RepoItemInfo(this, "txtPPTopPlan", ".//container[@controlname='topPlanSpinner']/text[@controlname='upDownEdit']", 30000, null, "5acdce90-a84c-41d4-ae66-dff16e260784");
+                _txtppqueryplanInfo = new RepoItemInfo(this, "txtPPQueryPlan", ".//container[@controlname='topPlanSpinner']/text[@controlname='upDownEdit']", 30000, null, "5acdce90-a84c-41d4-ae66-dff16e260784");
                 _ddlppplansbyInfo = new RepoItemInfo(this, "ddlPPPlansBy", ".//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']", 30000, null, "effa3ba9-fec7-4d8d-b111-ed7ad8576798");
             }
 
@@ -820,26 +872,26 @@ namespace AutomationSQLdm.QueryPlan
             }
 
             /// <summary>
-            /// The txtPPTopPlan item.
+            /// The txtPPQueryPlan item.
             /// </summary>
             [RepositoryItem("5acdce90-a84c-41d4-ae66-dff16e260784")]
-            public virtual Ranorex.Text txtPPTopPlan
+            public virtual Ranorex.Text txtPPQueryPlan
             {
                 get
                 {
-                    return _txtpptopplanInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _txtppqueryplanInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The txtPPTopPlan item info.
+            /// The txtPPQueryPlan item info.
             /// </summary>
             [RepositoryItemInfo("5acdce90-a84c-41d4-ae66-dff16e260784")]
-            public virtual RepoItemInfo txtPPTopPlanInfo
+            public virtual RepoItemInfo txtPPQueryPlanInfo
             {
                 get
                 {
-                    return _txtpptopplanInfo;
+                    return _txtppqueryplanInfo;
                 }
             }
 

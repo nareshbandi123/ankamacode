@@ -1,15 +1,13 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Grooming Modifications\Steps.cs" />
+    <Element value="QueryPlan\QueryPlanRepo.rxrep" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="Grooming Modifications\TC_721956\VerifyDBSizeTableIsAggregated.cs" />
-    <Element value="DataBaseOperations\DataAccess.cs" />
-    <Element value="Grooming Modifications\Steps.cs" />
+    <Element value="QueryPlan\Steps.cs" />
+    <Element value="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs" />
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="BVT\BVTRepo.rxrep" />
-    <Element value="BVT\Steps.cs" />
+    <Element value="QueryPlan\QueryPlanRepo.rxrep" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
