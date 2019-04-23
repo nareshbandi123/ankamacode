@@ -12,6 +12,11 @@ namespace AutomationSQLdm.Commons
     {
         
        public static int ApplicationOpenWaitTime = 280000;
+       
+       public static void WaitForSync(int TimeInSeconds)
+       {
+       		System.Threading.Thread.Sleep(TimeInSeconds);
+       }
 		
 		public static void DeleteFile(string filename)
         {

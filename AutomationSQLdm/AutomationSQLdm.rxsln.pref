@@ -6,6 +6,14 @@
       <string>{61F99090-53F7-41D0-9F8A-6FC8C2262E52}</string>
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
       <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
+      <string>a90e4e3c-9829-4a83-bbee-e4d59f167b43</string>
+      <string>c6471515-b305-43c3-947a-9f20f9c210ed</string>
+      <string>9579211a-e751-44c9-b74b-dc230951c448</string>
+      <string>da28d241-0b0a-450c-a3d8-2f198bf02265</string>
+      <string>60298f62-839b-4a23-bf30-9a7811a080f2</string>
+      <string>4d65e8f3-b2d7-456a-a0c9-29dfd377c10e</string>
+      <string>3137ec46-e0c8-4899-b7da-3b6100db3110</string>
+      <string>e68328c4-63e5-4a7b-af37-97be091bb397</string>
       <string>56c0efec-564d-4a04-86a2-443b6eab88b5</string>
       <string>9048b278-0637-4d23-b68c-e99131f61b18</string>
       <string>3fe29e15-39c7-47a6-967c-00cea19be7d8</string>
@@ -30,8 +38,12 @@
       <string>05a7eb2c-c01f-4b28-8723-e1fbd75a8fdf</string>
       <string>3657fc4e-b055-465d-a700-e74568c740df</string>
       <string>03966b51-a673-4015-846c-5b8827fc1bce</string>
+      <string>3b8b5352-a8da-46bf-8247-c2b98cf99969</string>
+      <string>2d555f95-f75e-4e5e-8760-9ab9ca55ffbc</string>
+      <string>bf4b5253-d8b9-4cde-8924-038af1a645f4</string>
+      <string>ed90acd0-bea4-4bc4-916e-4382a922dd08</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[BVT[]QueryPlan[TC_722069[]]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\QueryPlan\QueryPlanRepo.rxrep&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT\TC_722136" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\QueryPlan&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>

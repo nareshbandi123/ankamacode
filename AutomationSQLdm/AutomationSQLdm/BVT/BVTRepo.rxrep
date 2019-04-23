@@ -3993,6 +3993,13 @@ AAAAAAAAABiKEP4PL9Uva6cOhYIAAAAASUVORK5CYII=
 			searchtimeout="30000ms">
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']
 			</item>
+			<item
+			capname="menuitem"
+			id="d204e29f-6b7b-4aca-84d5-98ed59863005"
+			name="ddlRESDiskSize"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ResourcesDiskSizeView']//toolbar[@controlname='driveStatisticsHeaderStrip']/menuitem[@accessiblename~'^Current\ Disk\ Usage:\ Megab']
+			</item>
 			<basepath>
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>

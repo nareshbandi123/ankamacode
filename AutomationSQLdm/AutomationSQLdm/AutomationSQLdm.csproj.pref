@@ -1,13 +1,20 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="QueryPlan\QueryPlanRepo.rxrep" />
-  </Array>
-  <Array name="bookmarks" />
-  <Array name="files">
     <Element value="QueryPlan\Steps.cs" />
-    <Element value="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs" />
+  </Array>
+  <Array name="bookmarks">
+    <Element value="Breakpoint|C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\QueryPlan\TC_722074\SelectCPUUsageforQueryPlans.cs|50|11|True|Break||" />
+    <Element value="Breakpoint|C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs|39|11|True|Break||" />
+    <Element value="Breakpoint|C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs|43|11|True|Break||" />
+    <Element value="Breakpoint|C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs|46|11|True|Break||" />
+    <Element value="Breakpoint|C:\Users\administrator.SIMPSONS\repos\ankamacode\AutomationSQLdm\AutomationSQLdm\QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs|51|11|True|Break||" />
+  </Array>
+  <Array name="files">
+    <Element value="BVT\Steps.cs" />
     <Element value="AutomationSQLdm.rxtst" />
-    <Element value="QueryPlan\QueryPlanRepo.rxrep" />
+    <Element value="BVT\BVTRepo.rxrep" />
+    <Element value="QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs" />
+    <Element value="QueryPlan\Steps.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

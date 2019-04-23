@@ -147,6 +147,39 @@
     <Compile Include="BVT\Steps.cs">
       <id>4f4d7609-24f4-4588-9914-7943fa6ff22b</id>
     </Compile>
+    <Compile Include="BVT\TC_722025\Verifydatacollectionhappensandshowsdata.cs">
+      <id>9785ca86-63cd-4e3c-9781-b4c6db1b1a13</id>
+    </Compile>
+    <Compile Include="BVT\TC_722026\Verifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdata.cs">
+      <id>78a48513-3967-48a4-b902-a3be88e149f4</id>
+    </Compile>
+    <Compile Include="BVT\TC_722027\VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonMemoryscreen.cs">
+      <id>4ccee170-e095-4ad4-b7ae-b88cc71df88b</id>
+    </Compile>
+    <Compile Include="BVT\TC_722028\VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonDiskscreen.cs">
+      <id>f1282e8a-f87c-4536-b7b0-4e2d1ce2845c</id>
+    </Compile>
+    <Compile Include="BVT\TC_722029\VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonDiskSizescreen.cs">
+      <id>6ade35dd-b3fd-48b3-95f5-580feb961471</id>
+    </Compile>
+    <Compile Include="BVT\TC_722030\VerifydatacollectionhappensonaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonFileActivityscreen.cs">
+      <id>80338da6-1f4c-4e24-abe9-33f9800260f1</id>
+    </Compile>
+    <Compile Include="BVT\TC_722031\VerifydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermissionandshowsdataonProcedureCachescreen.cs">
+      <id>b88ea0ea-f527-4f40-87fa-3d6b6d516bdf</id>
+    </Compile>
+    <Compile Include="BVT\TC_722032\VerifydatacollectionandshowsdataonServerWaitsscreen.cs">
+      <id>6330cda1-787f-498c-a064-bcc951f5d8a2</id>
+    </Compile>
+    <Compile Include="BVT\TC_722033\VerifyquerydataconnectedwithuserandshowsdataonSummaryscreen.cs">
+      <id>757b07c7-a2e2-49b4-9229-53d02bf1a9f8</id>
+    </Compile>
+    <Compile Include="BVT\TC_722034\VerifyquerydataconnectedwithuserandshowsdataonAvailabilityGroupscreen.cs">
+      <id>e7cc8b03-34f7-4f8f-9595-b759bd098c4b</id>
+    </Compile>
+    <Compile Include="BVT\TC_722035\VerifyquerydataconnectedwithuserandshowsdataonTempdbSummaryscreen.cs">
+      <id>98b0f2da-2f48-49e7-b330-4d129b2a07c7</id>
+    </Compile>
     <Compile Include="BVT\TC_722135\PendingUpdateVerifythatResourcesServerWaitsviewisDisplayedSuccessfull.cs">
       <id>a53b3083-4452-4662-b28f-2e2fa4246c74</id>
     </Compile>
@@ -303,6 +336,21 @@
     <Compile Include="QueryPlan\TC_722069\Inputinvaliddataincollectqueryplanscountandverifychangescantbesaved.cs">
       <id>b021320b-54a0-4cc6-a42b-f89ea87a0254</id>
     </Compile>
+    <Compile Include="QueryPlan\TC_722072\SelectDurationmillisecondsforqueryplans.cs">
+      <id>329adfad-85d2-4c95-aef6-dd552a0d8e70</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722073\SelectLogicaldiskReadsforQueryPlans.cs">
+      <id>ba889efa-ff53-4722-8da5-9576fc704e69</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722074\SelectCPUUsageforQueryPlans.cs">
+      <id>a05d1dd8-ce47-4686-ba7e-3b931c09910e</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722075\SelectPhysicalDiskWritesforQueryPlans.cs">
+      <id>26aff580-04ee-407f-8c8d-c1449a105fbc</id>
+    </Compile>
+    <Compile Include="QueryPlan\TC_722081\VerifyQueryStoreradioButtonisnewlyaddedfor2016and2017versioninstances.cs">
+      <id>a9cf1c01-4a97-4643-9c32-b81d61ad9196</id>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -380,6 +428,39 @@
     </Folder>
     <Folder Include="Base">
       <id>ef5cd861-297c-44b3-a2dd-d36529c4ce01</id>
+    </Folder>
+    <Folder Include="BVT\TC_722035">
+      <id>e68328c4-63e5-4a7b-af37-97be091bb397</id>
+    </Folder>
+    <Folder Include="BVT\TC_722034">
+      <id>3137ec46-e0c8-4899-b7da-3b6100db3110</id>
+    </Folder>
+    <Folder Include="BVT\TC_722033">
+      <id>4d65e8f3-b2d7-456a-a0c9-29dfd377c10e</id>
+    </Folder>
+    <Folder Include="BVT\TC_722032">
+      <id>60298f62-839b-4a23-bf30-9a7811a080f2</id>
+    </Folder>
+    <Folder Include="BVT\TC_722031">
+      <id>da28d241-0b0a-450c-a3d8-2f198bf02265</id>
+    </Folder>
+    <Folder Include="BVT\TC_722028">
+      <id>c6471515-b305-43c3-947a-9f20f9c210ed</id>
+    </Folder>
+    <Folder Include="BVT\TC_722027">
+      <id>a90e4e3c-9829-4a83-bbee-e4d59f167b43</id>
+    </Folder>
+    <Folder Include="BVT\TC_722026">
+      <id>bd300ed4-8efe-43e5-8bb0-c9eafe7e1a27</id>
+    </Folder>
+    <Folder Include="BVT\TC_722030">
+      <id>9579211a-e751-44c9-b74b-dc230951c448</id>
+    </Folder>
+    <Folder Include="BVT\TC_722029">
+      <id>44527ad1-5130-4c6a-be4a-1593b813609f</id>
+    </Folder>
+    <Folder Include="BVT\TC_722025">
+      <id>c66ce445-4077-408d-9102-085bf2ed3f6c</id>
     </Folder>
     <Folder Include="BVT\TC_722135">
       <id>56c0efec-564d-4a04-86a2-443b6eab88b5</id>
@@ -515,6 +596,21 @@
     </Folder>
     <Folder Include="QueryPlan">
       <id>3657fc4e-b055-465d-a700-e74568c740df</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722081">
+      <id>ed90acd0-bea4-4bc4-916e-4382a922dd08</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722072">
+      <id>93fd551e-c170-4ae4-967d-25f3b3db20ea</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722075">
+      <id>bf4b5253-d8b9-4cde-8924-038af1a645f4</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722074">
+      <id>2d555f95-f75e-4e5e-8760-9ab9ca55ffbc</id>
+    </Folder>
+    <Folder Include="QueryPlan\TC_722073">
+      <id>3b8b5352-a8da-46bf-8247-c2b98cf99969</id>
     </Folder>
     <Folder Include="QueryPlan\TC_722069">
       <id>03966b51-a673-4015-846c-5b8827fc1bce</id>

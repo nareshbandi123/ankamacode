@@ -250,6 +250,7 @@ namespace AutomationSQLdm.BVT
             RepoItemInfo _tblresprocedurecacheInfo;
             RepoItemInfo _ddlresfileactivityInfo;
             RepoItemInfo _tblresserverwaitsInfo;
+            RepoItemInfo _ddlresdisksizeInfo;
 
             /// <summary>
             /// Creates a new SQLdm  folder.
@@ -293,6 +294,7 @@ namespace AutomationSQLdm.BVT
                 _tblresprocedurecacheInfo = new RepoItemInfo(this, "tblRESProcedureCache", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ResourcesProcedureCacheView']/container[@controlname='ResourcesProcedureCacheView_Fill_Panel']//table[@accessiblerole='Table']", 30000, null, "797df68b-a71a-4e40-b8d7-b1986df3f57d");
                 _ddlresfileactivityInfo = new RepoItemInfo(this, "ddlRESFileActivity", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']//container[@controlname='ResourcesFileActivity']/?/?/combobox[@controlname='drivesComboBox']", 30000, null, "1a4b4b4a-508c-48c0-9f96-c688cad8d0cb");
                 _tblresserverwaitsInfo = new RepoItemInfo(this, "tblRESServerWaits", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//table[@accessiblerole='Table']", 30000, null, "733500fd-1a67-4628-9b84-3c8f8c52ed24");
+                _ddlresdisksizeInfo = new RepoItemInfo(this, "ddlRESDiskSize", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']/container[@controlname='ResourcesDiskSizeView']//toolbar[@controlname='driveStatisticsHeaderStrip']/menuitem[@accessiblename~'^Current\\ Disk\\ Usage:\\ Megab']", 30000, null, "d204e29f-6b7b-4aca-84d5-98ed59863005");
             }
 
             /// <summary>
@@ -1158,6 +1160,30 @@ namespace AutomationSQLdm.BVT
                 get
                 {
                     return _tblresserverwaitsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ddlRESDiskSize item.
+            /// </summary>
+            [RepositoryItem("d204e29f-6b7b-4aca-84d5-98ed59863005")]
+            public virtual Ranorex.MenuItem ddlRESDiskSize
+            {
+                get
+                {
+                    return _ddlresdisksizeInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ddlRESDiskSize item info.
+            /// </summary>
+            [RepositoryItemInfo("d204e29f-6b7b-4aca-84d5-98ed59863005")]
+            public virtual RepoItemInfo ddlRESDiskSizeInfo
+            {
+                get
+                {
+                    return _ddlresdisksizeInfo;
                 }
             }
 

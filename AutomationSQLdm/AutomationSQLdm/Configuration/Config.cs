@@ -21,7 +21,7 @@ namespace AutomationSQLdm.Configuration
 		public const string ServerOptions_DEFAULTSERVER 	= "CMWIN2016-S8";  //ForNavigations
 		
 		
-		//Available Queryyes
+		//Available Queryyes for Grooming Opetions
 		public const string Query_DBFileStatistics 			= "Select * from DatabaseFileStatistics";
 		public const string Query_DBSize		   			= "Select * from DatabaseSize";
 		public const string Query_DBSizeDateTime   			= "Select * from DatabaseSizeDateTime";
@@ -37,6 +37,12 @@ namespace AutomationSQLdm.Configuration
 		public const string Query_DiskDriveStatisticsAggregation	= "Select * from DiskDriveStatisticsAggregation";
 		public const string Query_TableGrowthAggregation 			= "Select * from TableGrowthAggregation";
 		
+		
+		//Available Queryyes for Top Query Plans
+		public const string Query_DurationMilliseconds		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by DurationMilliseconds DESC";
+		public const string Query_LogicalDiskReads 			= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Reads DESC";
+		public const string Query_CPUUsage 					= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by CPUMilliseconds DESC";
+		public const string Query_PhysicalDiskWrites		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Writes DESC";
 		
 		
     }

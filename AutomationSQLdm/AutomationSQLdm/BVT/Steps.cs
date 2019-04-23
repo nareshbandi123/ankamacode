@@ -384,8 +384,7 @@ namespace AutomationSQLdm.BVT
 				{
 					throw new Exception("Failed : ClickOnQueryHistory :" + ex.Message);
 				}
-			}
-          
+			}          
            public static void ClickOnQueryWaits()
 			{
 				try 
@@ -504,8 +503,24 @@ namespace AutomationSQLdm.BVT
 					throw new Exception("Failed : ClickOnTempDBSummary :" + ex.Message);
 				}
 			}
+			  
+		   public static void ClickOnAvailabilityGroupInDB()
+			{
+				try 
+				{ 					
+				    repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.DatabasesTab.rgDBAvailabillityGroupInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.DatabasesTab.rgDBAvailabillityGroup.Click();
+				    Reports.ReportLog("Successfully Clicked On Availability Group in Databases", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : ClickOnAvailabilityGroupInDB :" + ex.Message);
+				}
+			}
 			 
-			   public static void ClickOnSummaryInDB()
+	       public static void ClickOnSummaryInDB()
 			{
 				try 
 				{ 
@@ -740,7 +755,29 @@ namespace AutomationSQLdm.BVT
 				}
 			}
 			
-			
+			public static void VerifyAvailabilityGroupInDatabases()
+			{
+				try 
+				{
+					repo.SQLdm.SelfInfo.WaitForExists(new Duration(1000000));
+				    repo.SQLdm.tblDBSTempDBSummaryInfo.WaitForItemExists(1000000);
+				    
+				    if (repo.SQLdm.tblDBSTempDBSummaryInfo.Exists())
+					{
+						repo.SQLdm.tblDBSTempDBSummary.Rows[0].Click();
+						Reports.ReportLog("No Of Records Present in Availability Group In DataBases Is:" + repo.SQLdm.tblDBSTempDBSummary.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+						Reports.ReportLog("Availability Group In Databases Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Verify Availability Group In Databases Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+					}
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyAvailabilityGroupInDatabases :" + ex.Message);
+				}
+			}
 			
 			public static void VerifyConfigurationInDataBases()
 			{
@@ -789,8 +826,6 @@ namespace AutomationSQLdm.BVT
 					throw new Exception("Failed : VerifyFilesInDataBases :" + ex.Message);
 				}
 			}
-			
-			
 			
 			 public static void ClickOnResourcesTab()
 			{
@@ -1026,6 +1061,23 @@ namespace AutomationSQLdm.BVT
 	            }
 
 			}
+			  
+			 public static void VerifyDiskSizeViewInResources()
+			  {
+				try 
+				{									  
+					if (repo.SQLdm.ddlRESDiskSizeInfo.Exists())
+						
+						Reports.ReportLog("Current Disk Usage Under Resourses Displayed Successfully", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					else
+						Reports.ReportLog("Current Disk Usage Under Resourses Is Not Displaying", Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+				} 
+				catch (Exception ex)
+				{
+					throw new Exception("Failed : VerifyDiskSizeViewInResources :" + ex.Message);
+				}
+
+			}
 			
 
 			 public static void VerifyFileActivityInResources()
@@ -1098,6 +1150,8 @@ namespace AutomationSQLdm.BVT
 					throw new Exception("Failed : VerifyServerWaitsInResources :" + ex.Message);
 				}
 			}
+            
+           
 			  
           //--------------------------------------
          
