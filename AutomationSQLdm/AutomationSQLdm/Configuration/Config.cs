@@ -39,6 +39,7 @@ namespace AutomationSQLdm.Configuration
 		
 		
 		//Available Queryyes for Top Query Plans
+		//delete from QueryMonitorStatistics
 		public const string Query_DurationMilliseconds		= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by DurationMilliseconds DESC";
 		public const string Query_LogicalDiskReads 			= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by Reads DESC";
 		public const string Query_CPUUsage 					= "select PlanID from QueryMonitorStatistics where SQLServerID = '4' and PlanID is not null order by CPUMilliseconds DESC";

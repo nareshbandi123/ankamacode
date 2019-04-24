@@ -52,13 +52,10 @@ namespace AutomationSQLdm.QueryPlan.TC_722075
         		Steps.ClickOnOkInAQFC();
         		Steps.ClickOnOkInMSSP();
         		Steps.ClickOnWarningYes();
-        		
         		Common.WaitForSync(420000);
-        		
         		Steps.ClickOnConfigureQueryMonitor();
         		Steps.UnCheckEnableQueryMonitor();
         		Steps.ClickOnOkInMSSP();
-        		
         		Steps.VerifyQueryDataForTopQueryPlan(Config.Query_PhysicalDiskWrites,"PhysicalDiskWrites");
         		
         	} 

@@ -35,15 +35,15 @@ namespace AutomationSQLdm.QueryPlan
         public static void ClickOnFile()
 		{
 			try 
-				{
-					repo.SQLdmDesktop.FileInfo.WaitForExists(new Duration(1000000));
-					repo.SQLdmDesktop.File.Click();
-					Reports.ReportLog("ClickOnFile", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-				} 
+			{
+				repo.SQLdmDesktop.FileInfo.WaitForExists(new Duration(1000000));
+				repo.SQLdmDesktop.File.ClickThis();
+				Reports.ReportLog("ClickOnFile", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+			} 
 			catch (Exception ex)
-				{
+			{
 				throw new Exception("Failed : ClickOnFile :" + ex.Message);
-				}
+			}
 		}
         
         public static void SelectConnectRepoOption()
@@ -106,9 +106,8 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					
-				    repo.SQLdmDesktop.tabQueriesInfo.WaitForExists(new Duration(1000000));
 				    repo.SQLdmDesktop.tabQueriesInfo.WaitForItemExists(1000000);
-				    repo.SQLdmDesktop.tabQueries.Click();
+				    repo.SQLdmDesktop.tabQueries.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Queries Tab", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
 				} 
@@ -123,7 +122,7 @@ namespace AutomationSQLdm.QueryPlan
 				{
 					
 				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureModeInfo.WaitForExists(new Duration(1000000));
-				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureMode.Click();
+				    repo.SQLdmDesktop.QueriesTab.rgQUESignatureMode.ClickThis();
 				    Reports.ReportLog("Successfully Clicked On Signature Mode", Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
 					
 				} 
@@ -457,9 +456,14 @@ namespace AutomationSQLdm.QueryPlan
 					{	
 						DataTable dtInfo = DataAccess.GetData(strQuery);
 		        		if(dtInfo != null && dtInfo.Rows.Count > 0)
+		        		{
 		        		    Reports.ReportLog("Total No Of Records present in " + strTableName + "  Is : " + dtInfo.Rows.Count, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+		        			Reports.ReportLog("No Of Plan ID's present in " + strTableName + "  Is : " + dtInfo.Rows.Count, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+		        		}
 		        		else
+		        		{
 			        	    Reports.ReportLog("Records is not present in Table: " + strTableName, Reports.SQLdmReportLevel.Fail, null, Config.TestCaseName);
+		        		}
 			        	
 					} 
 				catch (Exception ex)
@@ -473,34 +477,23 @@ namespace AutomationSQLdm.QueryPlan
 				try 
 				{
 					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansByInfo.WaitForItemExists(1000000);
-					
-					
-					
-					
-					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.SelectedItemIndex = 2;
 					Common.WaitForSync(5000);
-					//System.Threading.Thread.Sleep()
-					//repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.btnPPPlandByOpen.ClickThis();
-					//repo.PlansBy.lblLogicalDiskReads.ClickThis();
-//					string defaultSelectedItem = repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.SelectedItemText;
-//					ListItem itemToSelect = @"/form/?/?/list[@accessiblename='"+ defaultSelectedItem +"']/listitem[@accessiblename='"+ plansBy +"']";
-//					if(itemToSelect != null)
-//					{
-//						itemToSelect.Select();
-//					}
+					repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.btnPPPlandByOpen.ClickThis();
+					Common.WaitForSync(5000);
 					
-//					foreach (var item in repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.Items) 
-//					{
-//						if(item.Text == plansBy)
-//						{
-//							repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.SelectedItemIndex = item.Index;
-//							
-//							//item.Select();
-//							Reports.ReportLog("Successfully Selected Plans By As:" + plansBy, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
-//							break;
-//						}
-//					}
+					string defaultSelectedItem = repo.MonitoredSQLServerProperties.pnlPoorlyPerforming.ddlPPPlansBy.SelectedItem.Text;
+					ListItem itemToSelect = @"/form/?/?/list[@accessiblename='"+ defaultSelectedItem +"']/listitem[@accessiblename='"+ plansBy +"']";
 					
+					if(itemToSelect != null)
+					{
+						itemToSelect.ClickThis();
+						Common.WaitForSync(5000);
+						Reports.ReportLog("Successfully Selected Plans By As: " + plansBy, Reports.SQLdmReportLevel.Success, null, Config.TestCaseName);
+					}
+					else
+					{
+						Reports.ReportLog("Failed to Select Plans By As: " + plansBy, Reports.SQLdmReportLevel.Info, null, Config.TestCaseName);
+					}
 				} 
 				catch (Exception ex)
 				{

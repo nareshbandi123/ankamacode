@@ -91,7 +91,7 @@ namespace AutomationSQLdm.Application
             /// Creates a new IderaSQLdmRepo  folder.
             /// </summary>
             public IderaSQLdmRepoAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("IderaSQLdmRepo", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 30000, null, true, "3740dcd6-d531-41d1-9c95-f02d217dce74", "")
+                    base("IderaSQLdmRepo", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 180000, null, true, "3740dcd6-d531-41d1-9c95-f02d217dce74", "")
             {
                 _lblsqldmtodayInfo = new RepoItemInfo(this, "lblSQLDMToday", ".//button[@automationid='toolBarTodayButton']/text[@caption='SQLDM Today']", 30000, null, "dc6dc38a-499d-48a4-96d2-e1b6e7640819");
             }

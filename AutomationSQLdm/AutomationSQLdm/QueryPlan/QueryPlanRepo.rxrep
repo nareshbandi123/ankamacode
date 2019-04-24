@@ -39,7 +39,7 @@ rxversion="8.2">
 			capname="text"
 			id="8e40f701-63be-4ffb-a947-93ef2ff123bd"
 			name="File"
-			searchtimeout="30000ms">
+			searchtimeout="180000ms">
 				/form[@title~'^Idera\ SQL\ diagnostic\ mana']//list[@automationid='fileMenu']/picture[@automationid='HeaderPresenter']/text[@caption='File']
 			</item>
 			<item
@@ -209,7 +209,7 @@ rxversion="8.2">
 				capname="combobox"
 				id="effa3ba9-fec7-4d8d-b111-ed7ad8576798"
 				name="ddlPPPlansBy"
-				searchtimeout="30000ms">
+				searchtimeout="180000ms">
 					//form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='tableLayoutPanel16']/container[@controlname='fmePoorlyPerformingThresholds']//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']
 				</item>
 				<item

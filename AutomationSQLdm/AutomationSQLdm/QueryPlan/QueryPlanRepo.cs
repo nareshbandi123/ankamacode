@@ -145,7 +145,7 @@ namespace AutomationSQLdm.QueryPlan
                 _queriestab = new QueryPlanRepoFolders.QueriesTabFolder(this);
                 _toolsInfo = new RepoItemInfo(this, "Tools", ".//list[@automationid='toolsMenu']/picture[@automationid='HeaderPresenter']/text[@caption='Tools']", 30000, null, "eb5102cb-9ffe-4187-a21a-7bfb33aeacd0");
                 _allserversInfo = new RepoItemInfo(this, "AllServers", ".//statusbar[@automationid='statusBar']/?/?/container[@automationid='navigationPaneHost']/?/?/container[@controlname='NavigationPaneControl']//container[@controlname='serverGroupPanel']/tree[@controlname='userViewTreeView']/treeitem[@accessiblename='All Servers']", 30000, null, "e1dd82b2-0166-4cf7-9332-0b716603424e");
-                _fileInfo = new RepoItemInfo(this, "File", ".//list[@automationid='fileMenu']/picture[@automationid='HeaderPresenter']/text[@caption='File']", 30000, null, "8e40f701-63be-4ffb-a947-93ef2ff123bd");
+                _fileInfo = new RepoItemInfo(this, "File", ".//list[@automationid='fileMenu']/picture[@automationid='HeaderPresenter']/text[@caption='File']", 180000, null, "8e40f701-63be-4ffb-a947-93ef2ff123bd");
                 _tabqueriesInfo = new RepoItemInfo(this, "tabQueries", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Queries']", 600000, null, "7d1ef42b-c90e-43b5-9c73-65b5f3c4864c");
                 _btnqueconfigurequerymonitorInfo = new RepoItemInfo(this, "btnQUEConfigureQueryMonitor", ".//toolbar[@automationid='ribbon']/tabpage[@automationid='Queries']/toolbar[@automationid='queriesTabPropertiesGroup']/button", 30000, null, "10e61a27-baa0-4838-839d-0d62b5e2739a");
             }
@@ -797,7 +797,7 @@ namespace AutomationSQLdm.QueryPlan
                 _txtppcpuusageInfo = new RepoItemInfo(this, "txtPPCPUUsage", ".//container[@controlname='cpuThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "ac2a74df-b58f-435f-9968-53227f66f0c0");
                 _txtppphysicaldiskwritesInfo = new RepoItemInfo(this, "txtPPPhysicalDiskWrites", ".//container[@controlname='physicalWritesThresholdSpinner']/text[@controlname='upDownEdit']", 30000, null, "ff7b6a58-395a-411c-af8a-e8471c18dd0a");
                 _txtppqueryplanInfo = new RepoItemInfo(this, "txtPPQueryPlan", ".//container[@controlname='topPlanSpinner']/text[@controlname='upDownEdit']", 30000, null, "5acdce90-a84c-41d4-ae66-dff16e260784");
-                _ddlppplansbyInfo = new RepoItemInfo(this, "ddlPPPlansBy", ".//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']", 30000, null, "effa3ba9-fec7-4d8d-b111-ed7ad8576798");
+                _ddlppplansbyInfo = new RepoItemInfo(this, "ddlPPPlansBy", ".//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/combobox[@accessiblerole='ComboBox']", 180000, null, "effa3ba9-fec7-4d8d-b111-ed7ad8576798");
                 _btnppplandbyopenInfo = new RepoItemInfo(this, "btnPPPlandByOpen", ".//element[@controlname='topPlanComboBox']/combobox[@accessiblename='Plans by ']/?/?/button[@accessiblename='Open']", 30000, null, "631a39c2-acdd-4171-b133-42da76f46742");
             }
 

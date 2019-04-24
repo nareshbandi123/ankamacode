@@ -20,7 +20,7 @@ rxversion="8.2">
 		isrooted="True"
 		name="IderaSQLdmRepo"
 		refpath="/form[@title='Idera SQL diagnostic manager - SQLdmRepository (AUT-SQL-DEV-001)']"
-		searchtimeout="30000ms"
+		searchtimeout="180000ms"
 		usecache="True">
 			<item
 			addcaps="text,wpfelement"

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,7 +12,6 @@ using Ranorex.Core.Testing;
 
 using AutomationSQLdm.Commons;
 using AutomationSQLdm.Configuration;
-
 
 namespace AutomationSQLdm.QueryPlan.TC_722073
 {
